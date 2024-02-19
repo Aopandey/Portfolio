@@ -1,45 +1,60 @@
 import streamlit as zx
 import pandas
+import base64
+from pathlib import Path
+from PIL import Image
 
-zx.set_page_config(layout="wide")
-col1, col2 = zx.columns(2)
-row1 = zx.subheader(1)
+title = "Portfolio | Avinash Pandey"
+name = "Avinash Pandey"
+description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University Indianapolis"
+                ", Graduating December 2024.")
+description2 = "➡️ Software Development and Data Science Enthusiast."
+email = "aopandey@iu.edu"
+social_media = {
+    "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
+    "GitHub": "https://github.com/Aopandey"
+}
 
+zx.set_page_config(page_title=title)
+
+with open("styles/main.css") as f:
+    zx.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+with open("images/Avinash Pandey Resume.pdf","rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+    profile_pic = Image.open("images/photo.jpg")
+
+col1, col2 = zx.columns(2, gap="small")
 with col1:
-    zx.image("images/photo.jpg")
+    zx.image(profile_pic)
 
 with col2:
-    zx.title("Avinash Pandey")
-    content = """
-    I am a Senior majoring in Computer Science at the Purdue University Indianapolis.
-    I am looking to further my knowledge and gain more experience in the Software Development and Cloud Computing field 
-    through an internship in Summer. I have a strong passion for Programming, App development, Web development, problem-solving, and data analysis. 
-    I am hard-working, focused, objective-oriented with proven knowledge of Python, JavaScript, C, C++, Java, HTML, CSS, and SQL.
-    In addition, I also possess problem-solving and analytical skills and can speak multiple languages.
-    """
-    zx.info(content)
+    zx.title(name)
+    zx.write(description1)
+    zx.write(description2)
+    zx.download_button(
+        label="📁 Download Resume",
+        data=PDFbyte,
+        file_name="Avinash Pandey Resume.pdf",
+        mime="application/octet-stream",
+    )
+    zx.write("Email:", email)
+    zx.write("#")
+    zx.write("🌟Explore the website to learn more about the projects I've done to demonstrate my Skills. "
+                 "Feel free to contact me!🌟")
 
-with row1:
-    subhead = "Below you can find some of the apps I've built. Feel free to contact me!"
+zx.write("#")
+zx.subheader("Professional Platforms")
+zx.write("---")
+cols = zx.columns(len(social_media))
+for index, (platform, link) in enumerate(social_media.items()):
+    cols[index].write(f"[{platform}]({link})")
 
-    zx.info(subhead)
-
-col3, empty_col, col4 = zx.columns([1.5, 0.5, 1.5])
-
-data = pandas.read_csv("data.csv", sep=";")
-
-with col3:
-    for index, row in data[:10].iterrows():
-        zx.header(row["title"])
-        zx.write(row["description"])
-        zx.write(f"[Source Code]({row['url']})")
-        zx.image("images/" + row["image"])
-
-
-with col4:
-    for index, row in data[10:].iterrows():
-        zx.header(row["title"])
-        zx.write(row["description"])
-        zx.write(f"[Source Code]({row['url']})")
-        zx.image("images/" + row["image"])
-
+zx.write("#")
+zx.subheader("Technical Skills")
+zx.write("---")
+zx.write("""
+    - Languages: Python, C, C++, Java, JavaScript, CSS, R/R-Studio, SQL
+    - Framework and Libraries: Django, Flask, PySimpleGUI, Pandas, React
+    - Tools/Frameworks: GitHub, AWS, Microsoft Azure, PyCharm, Jupyter
+    - Database Management: MySQL, MongoDB, Microsoft SQL Server, Azure Data Studio
+    """)

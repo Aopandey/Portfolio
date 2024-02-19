@@ -5,17 +5,9 @@ PDF Templates;A script that generates PDF templates of multiple pages given some
 PDF Invoices;A script that reads invoice records from Excel files and automatically generates PDF invoices.;https://github.com/Aopandey/PDF-Invoices-generator;4.png
 Weather Forecast Data App;A Streamlit web app leveraging the OpenWeatherMap API to offer customizable weather forecasts, displaying temperature trends or sky conditions for any city over up to five days. ;https://github.com/Aopandey/Weather-Forecast-App-;5.png
 Weather API;A REST API built with Python and Flask to serve historical weather data for various cities.;https://github.com/Aopandey/Weather-Station-Data-Hub/tree/master;6.png
-Download Cleaner;A script that monitors the Downloads folder and deletes old files keeping the folder clean.;https://pythonhow.com;7.png
-Tour Scraper;A program that checks a music band's website and sends an email when there are new tours.;https://pythonhow.com;8.png
-Helper Chatbot;A chatbot that knows about a specific topic and answers questions regarding that topic.;https://pythonhow.com;9.png
-Open Domain Chatbot;A chatbot built that can discuss anything with a human and is built using the Facebook API.;https://pythonhow.com;10.png
-Webcam Motion Detector;A program that monitors the computer webcam and sends an email when a new object enters the view.;https://pythonhow.com;11.png
-Typing Analyzer;A program that monitors the computer keyboard and returns the most typed words of the session.;https://pythonhow.com;12.png
-Internet Speed Analysis;A program that records the internet speed every few seconds and plots the values on the browser.;https://pythonhow.com;13.png
-Monitoring Data;A program that monitors a particular website and periodically records the data to a remote server.;https://pythonhow.com;14.png
-Visualizing Data;A program that visualizes the data collected in the previous monitoring program. ;https://pythonhow.com;15.png
-Visualizing Weather Forecast;A data web app that visualizes the weather forecast for the next five days of any city.;https://pythonhow.com;16.png
-Student Management System;A desktop PyQt6 GUI app for managing university student data with an SQL database backend.;https://pythonhow.com;17.png
-School Management System;A desktop PyQt6 GUI app for managing complex university data with an SQL database backend.;https://pythonhow.com;18.png
-Restaurant Menu Web App;A Django web app to let customers see a restaurant menu and meal availability.;https://pythonhow.com;19.png
-Online Store;A Django online store app where users can place orders and sellers can manage them.;https://pythonhow.com;20.png
+ATM System;A Java-based ATM simulation system featuring user authentication, role-based functionalities, and account management through console-based interactions.;https://github.com/Aopandey/ATM-System;atm-machine.png
+Virtual Pet;This project is a Java-based console application for managing virtual pets, supporting creation, customization, and serialization for persistent storage.; https://github.com/Aopandey/Virtual-Pet-;virtual-pet.png
+Horse Race;This project is a C++ console application that simulates a randomized horse race using object-oriented programming and procedural generation.; https://github.com/Aopandey/Horse-Race-;horse.png
+Student Record;This project is a C++ student management system that handles student data, including personal and academic details, through object-oriented design and file I/O operations.; https://github.com/Aopandey/Student-Record;record.png
+Snake Game;This C++ project is a Windows console-based snake game featuring dynamic snake movement, food generation, collision detection, and user input handling via the Windows API.;https://github.com/Aopandey/Snake-Game;snake.png
+Data Parsing and Summation Tool;This C++ program sums integers from "input.txt" to replicate text strings into "output.txt", demonstrating basic file and string manipulation.;https://github.com/Aopandey/Data-Parsing-and-Summation-Tool;data.png

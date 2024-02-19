@@ -1,6 +1,9 @@
 import streamlit as zx
 from send_email import send_mail
 
+with open("styles/main.css") as f:
+    zx.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 zx.header("Contact Me!")
 
 with zx.form(key="email_page"):
