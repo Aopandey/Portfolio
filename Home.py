@@ -47,7 +47,7 @@ zx.subheader("Professional Platforms")
 zx.write("---")
 cols = zx.columns(len(social_media))
 for index, (platform, link) in enumerate(social_media.items()):
-    cols[index].write(f"[{platform}]({link})")
+    cols[index].write(f"💻[{platform}]({link})")
 
 zx.write("#")
 zx.subheader("Technical Skills")
