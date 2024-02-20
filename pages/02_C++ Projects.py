@@ -24,7 +24,7 @@ with col7:
         zx.image("images/" + row["image"], width=image_width)
 
 with col8:
-    for index, row in data[10:].iterrows():
+    for index, row in data[10:11].iterrows():
         zx.subheader(row["title"])
         zx.write("---")
         zx.write(row["description"])
