@@ -16,7 +16,7 @@ col7, empty_col = zx.columns([1.5, 0.5])
 data = pandas.read_csv("data.csv", sep=";")
 
 with col7:
-    for index, row in data[8:].iterrows():
+    for index, row in data[8:8].iterrows():
         zx.subheader(row["title"])
         zx.write("---")
         zx.write(row["description"])
