@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Reader+Pro:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
 
-* {font-family: 'Readex Pro';}
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
 
+/* Default link styles for dark mode */
 a {
-    text-decoration:none;
-    color: white !important;
+    text-decoration: none;
+    color: white !important; /* Good for dark backgrounds */
     font-weight: 500;
 }
 
@@ -13,11 +16,22 @@ a:hover {
     text-decoration: none;
 }
 
-hr{
+/* Styles for light mode */
+@media (prefers-color-scheme: light) {
+    a {
+        color: black !important; /* Better visibility on light backgrounds */
+    }
+
+    a:hover {
+        color: #0074D9 !important; /* A different hover color for light mode */
+    }
+}
+
+hr {
     margin-top: 0px;
     margin-bottom: 5%;
 }
 
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+#MainMenu, footer, header {
+    visibility: hidden;
+}
