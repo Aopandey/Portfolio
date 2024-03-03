@@ -19,7 +19,7 @@ zx.set_page_config(page_title=title)
 
 with open("styles/main.css") as f:
     zx.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open("images/Avinash Pandey Resume .pdf", "rb") as pdf_file:
+with open("images/Avinash Pandey Resume.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
     profile_pic = Image.open("images/photo.jpg")
 
