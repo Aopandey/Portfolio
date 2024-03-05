@@ -14,12 +14,6 @@ def send_mail(subject, body):
 
     message = f"Subject: {subject}\n\n{body}"
 
-    try:
-        with smtplib.SMTP_SSL(host, port, context=context) as server:
-            server.login(username, password)
-            server.sendmail(username, receiver, message)
-    except smtplib.SMTPException as e:
-        print(f"SMTP error occurred: {e}")
-        # Depending on your application, you might want to handle the error differently,
-        # such as logging the error or sending a notification to the administrator.
-
+    with smtplib.SMTP_SSL(host, port, context=context) as server:
+        server.login(username, password)
+        server.sendmail(username, receiver, message)
