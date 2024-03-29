@@ -53,7 +53,7 @@ zx.write("#")
 zx.subheader("Technical Skills")
 zx.write("---")
 zx.write("""
-    - Languages: Python, C, C++, Java, JavaScript, CSS, R/R-Studio, SQL
+    - Languages: Python, C, C++, JavaScript, CSS, Java, R/R-Studio, SQL
     - Framework and Libraries: React, Redux, Express, Django, Flask, PySimpleGUI, Pandas 
     - Tools/Frameworks: GitHub, AWS, Microsoft Azure, PyCharm, Jupyter
     - Database Management: MySQL, MongoDB, Microsoft SQL Server, Azure Data Studio
