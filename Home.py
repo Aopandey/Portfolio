@@ -32,7 +32,7 @@ profile_pic = Image.open("images/photo.jpg")
 col1, col2 = st.columns([1, 3], gap="small")
 
 with col1:
-    st.image(profile_pic, width=150)
+    st.image(profile_pic, width=250)
 
 with col2:
     st.title(name)
