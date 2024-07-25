@@ -29,7 +29,7 @@ with open("images/Resume Avinash Pandey.pdf", "rb") as pdf_file:
 profile_pic = Image.open("images/photo.jpg")
 
 # Layout
-col1, col2 = st.columns([1, 3], gap="small")
+col1, col2 = st.columns([3, 1], gap="small")
 
 with col1:
     st.image(profile_pic)
