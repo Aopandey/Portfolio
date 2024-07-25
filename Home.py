@@ -9,7 +9,7 @@ name = "Avinash Pandey"
 description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University Indianapolis"
                 ", Graduating December 2024.")
 description2 = "➡️ Software Development and Data Science Enthusiast."
-email = "aopandey@iu.edu"
+email = "aopandey@purdue.edu"
 social_media = {
     "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
     "GitHub": "https://github.com/Aopandey"
@@ -19,7 +19,7 @@ zx.set_page_config(page_title=title)
 
 with open("styles/main.css") as f:
     zx.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open("images/Avinash Pandey Resume.pdf", "rb") as pdf_file:
+with open("images/Resume Avinash Pandey.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
     profile_pic = Image.open("images/photo.jpg")
 
