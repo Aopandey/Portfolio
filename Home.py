@@ -6,7 +6,7 @@ from PIL import Image
 
 title = "Portfolio | Avinash Pandey"
 name = "Avinash Pandey"
-description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University Indianapolis"
+description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University"
                 ", Graduating December 2024.")
 description2 = "➡️ Software Development and Data Science Enthusiast."
 email = "aopandey@purdue.edu"
@@ -54,7 +54,8 @@ zx.subheader("Technical Skills")
 zx.write("---")
 zx.write("""
     - Languages: Python, C, C++, JavaScript, CSS, Java, R/R-Studio, SQL
-    - Framework and Libraries: React, Redux, Express, Django, Flask, PySimpleGUI, Pandas 
-    - Tools/Frameworks: GitHub, AWS, Microsoft Azure, PyCharm, Jupyter
+    - Framework and Libraries: LangChain, Haystack, ZenML, Prefect, React, Redux, Express, Django, 
+        Flask, PySimpleGUI, Pandas,Paperetl, GROBID, PyTorch, TensorFlow, GitHub, AWS, Microsoft Azure, 
+        PyCharm, Jupyter
     - Database Management: MySQL, MongoDB, Microsoft SQL Server, Azure Data Studio
     """)
