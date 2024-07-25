@@ -55,7 +55,7 @@ zx.write("---")
 zx.write("""
     - Languages: Python, C, C++, JavaScript, CSS, Java, R/R-Studio, SQL
     - Framework and Libraries: LangChain, Haystack, ZenML, Prefect, React, Redux, Express, Django, 
-        Flask, PySimpleGUI, Pandas,Paperetl, GROBID, PyTorch, TensorFlow, GitHub, AWS, Microsoft Azure, 
+        Flask, PySimpleGUI, Pandas, Paperetl, GROBID, PyTorch, TensorFlow, GitHub, AWS, Microsoft Azure, 
         PyCharm, Jupyter
     - Database Management: MySQL, MongoDB, Microsoft SQL Server, Azure Data Studio
     """)
