@@ -1,10 +1,14 @@
-import streamlit as zx
-import pandas
+import streamlit as st
+import pandas as pd
 import base64
 from pathlib import Path
 from PIL import Image
 
+# Page Configuration
 title = "Portfolio | Avinash Pandey"
+st.set_page_config(page_title=title)
+
+# Personal Information
 name = "Avinash Pandey"
 description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University"
                 ", Graduating December 2024.")
@@ -15,67 +19,70 @@ social_media = {
     "GitHub": "https://github.com/Aopandey"
 }
 
-zx.set_page_config(page_title=title)
-
+# Load Resources
 with open("styles/main.css") as f:
-    zx.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 with open("images/Resume Avinash Pandey.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
-    profile_pic = Image.open("images/photo.jpg")
 
-col1, col2 = zx.columns(2, gap="small")
+profile_pic = Image.open("images/photo.jpg")
+
+# Layout
+col1, col2 = st.columns([1, 3], gap="small")
+
 with col1:
-    zx.image(profile_pic)
+    st.image(profile_pic, width=150)
 
 with col2:
-    zx.title(name)
-    zx.write(description1)
-    zx.write(description2)
-    zx.download_button(
+    st.title(name)
+    st.write(description1)
+    st.write(description2)
+    st.download_button(
         label="📁 Download Resume",
         data=PDFbyte,
         file_name="Avinash Pandey Resume.pdf",
         mime="application/octet-stream",
     )
-    zx.write("Email:", email)
-    zx.write("#")
-    zx.write("🌟Explore the website to learn more about the projects I've done to demonstrate my Skills. "
-                 "Feel free to contact me!🌟")
+    st.write(f"📧 Email: {email}")
+    st.write("---")
+    st.write("🌟Explore the website to learn more about the projects I've done to demonstrate my skills. "
+             "Feel free to contact me!🌟")
 
-zx.write("#")
-zx.subheader("Professional Platforms")
-zx.write("---")
-cols = zx.columns(len(social_media))
+# Social Media Links
+st.write("---")
+st.subheader("Professional Platforms")
+cols = st.columns(len(social_media))
 for index, (platform, link) in enumerate(social_media.items()):
     cols[index].write(f"💻[{platform}]({link})")
 
-zx.write("#")
-zx.subheader("Technical Skills")
-zx.write("---")
-zx.write("""
-    - Languages: Python, C, C++, JavaScript, CSS, Java, R/R-Studio, SQL
-    - Framework and Libraries: LangChain, Haystack, ZenML, Prefect, React, Redux, Express, Django, 
-        Flask, PySimpleGUI, Pandas, Paperetl, GROBID, PyTorch, TensorFlow, GitHub, AWS, Microsoft Azure, 
-        PyCharm, Jupyter
-    - Database Management: MySQL, MongoDB, Microsoft SQL Server, Azure Data Studio
-    """)
-
-zx.write("#")
-zx.subheader("Concepts Learning")
-zx.write("---")
-zx.write("""
-- Advanced Data Pipelines: Building scalable, DAG-based pipelines to manage and process large datasets.
-- Metadata Filtering Algorithms: Improving precision in summarized research outputs.
-- Automated Data Processing: Using tools like ZenML and Prefect for efficient data handling.
-- Streamlit Applications: Developing user-friendly web applications for data visualization and interaction.
+# Technical Skills
+st.write("---")
+st.subheader("Technical Skills")
+st.write("""
+- **Languages:** Python, C, C++, JavaScript, CSS, Java, R/R-Studio, SQL
+- **Framework and Libraries:** LangChain, Haystack, ZenML, Prefect, React, Redux, Express, Django, 
+  Flask, PySimpleGUI, Pandas, Paperetl, GROBID, PyTorch, TensorFlow, GitHub, AWS, Microsoft Azure, 
+  PyCharm, Jupyter
+- **Database Management:** MySQL, MongoDB, Microsoft SQL Server, Azure Data Studio
 """)
 
-zx.write("#")
-zx.subheader("Work Experience")
-zx.write("---")
-zx.write("""
+# Concepts Learning
+st.write("---")
+st.subheader("Concepts Learning")
+st.write("""
+- **Advanced Data Pipelines:** Building scalable, DAG-based pipelines to manage and process large datasets.
+- **Metadata Filtering Algorithms:** Improving precision in summarized research outputs.
+- **Automated Data Processing:** Using tools like ZenML and Prefect for efficient data handling.
+- **Streamlit Applications:** Developing user-friendly web applications for data visualization and interaction.
+""")
+
+# Work Experience
+st.write("---")
+st.subheader("Work Experience")
+st.write("""
 **Machine Learning Engineering Intern**  
-Aider Ventures, Indianapolis, IN  
+*Aider Ventures, Indianapolis, IN*  
 *July 2024 – Present*
 
 - Developed automated pipelines using Haystack to fetch and summarize trending research papers.
@@ -85,7 +92,7 @@ Aider Ventures, Indianapolis, IN
 - Deployed a Streamlit-based application to showcase the developed application.
 
 **Business Analyst Intern – Office of Technology Services**  
-Legislative Services Agency, Indianapolis, IN  
+*Legislative Services Agency, Indianapolis, IN*  
 *December 2023 – March 2024*
 
 - Collaborated with software developers to support & troubleshoot critical software.
