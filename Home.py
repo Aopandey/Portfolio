@@ -9,6 +9,7 @@ title = "Portfolio | Avinash Pandey"
 st.set_page_config(page_title=title)
 
 # Personal Information
+st.write("---")
 name = "Avinash Pandey"
 description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University"
                 ", Graduating December 2024.")
@@ -85,17 +86,22 @@ st.write("""
 *Aider Ventures, Indianapolis, IN*  
 *July 2024 – Present*
 
-- Developed automated pipelines using Haystack to fetch and summarize trending research papers.
-- Engineered scalable data pipelines leveraging ZenML and Prefect Python to analyze and classify research papers.
-- Implemented metadata filtering algorithms in LangChain, improving the precision of summarized research outputs.
-- Built scalable, DAG-based pipelines for large dataset processing.
-- Deployed a Streamlit-based application to showcase the developed application.
+- Develop automated pipelines using Haystack to fetch and summarize trending research papers, processing and summarizing over
+500 papers, ensuring efficient data handling and information retrieval from paperswithcode.com.
+- Engineer scalable data pipelines leveraging ZenML and Prefect Python to analyze and classify over 10,000 research papers,
+enhancing the categorization process of AI and LLM datasets.
+- Implement metadata filtering algorithms in LangChain, improving the precision of summarized research outputs by 20%.
+- Focus on building scalable, DAG-based pipelines, employing advanced techniques to manage and process large datasets, reducing
+processing time by 40%, improving the efficiency of data workflows, and enabling rapid data analysis and decision-making.
+- Deploy a Streamlit-based application showcasing the developed application enhancing user engagement and accessibility.
 
 **Business Analyst Intern – Office of Technology Services**  
 *Legislative Services Agency, Indianapolis, IN*  
 *December 2023 – March 2024*
 
-- Collaborated with software developers to support & troubleshoot critical software.
-- Executed advanced data verification and timeliness assurance processes for the Indiana General Assembly.
-- Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff.
+- Collaborated with software developers to support & troubleshoot critical software, achieving a 95% issue resolution rate.
+- Executed advanced data verification and timeliness assurance processes for the Indiana General Assembly, leveraging data analytics
+and quality control methodologies to maintain unparalleled data fidelity and promptness with a 98% accuracy rate.
+- Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff, optimizing
+business processes through problem resolution and the development of tailored applications and tools.
 """)
