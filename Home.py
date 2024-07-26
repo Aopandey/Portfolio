@@ -9,7 +9,6 @@ title = "Portfolio | Avinash Pandey"
 st.set_page_config(page_title=title)
 
 # Personal Information
-st.write("---")
 name = "Avinash Pandey"
 description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University"
                 ", Graduating December 2024.")
@@ -72,10 +71,12 @@ st.write("""
 st.write("---")
 st.subheader("Concepts Learning")
 st.write("""
-- **Advanced Data Pipelines:** Building scalable, DAG-based pipelines to manage and process large datasets.
+- **Machine Learning Operations (MLOps):** Implementing and managing machine learning pipelines and workflows in production.
 - **Metadata Filtering Algorithms:** Improving precision in summarized research outputs.
 - **Automated Data Processing:** Using tools like ZenML and Prefect for efficient data handling.
 - **Streamlit Applications:** Developing user-friendly web applications for data visualization and interaction.
+- **Frontend Development with React:** Building dynamic and responsive web applications using React.js, including state management with Redux.
+- **API Integration:** Connecting frontend applications with backend services through RESTful APIs.
 """)
 
 # Work Experience
