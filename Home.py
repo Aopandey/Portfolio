@@ -42,7 +42,7 @@ with col1:
         mime="application/octet-stream",
     )
     st.write(f"📧 Email: {email}")
-    st.write("----")
+    #st.write("----")
     st.write("🌟Explore the website to learn more about the projects I've done to demonstrate my skills. "
              "Feel free to contact me!🌟")
 
