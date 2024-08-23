@@ -72,6 +72,7 @@ st.write("---")
 st.subheader("Concepts Learning")
 st.write("""
 - **Machine Learning Operations (MLOps):** Implementing and managing machine learning pipelines and workflows in production.
+- **Cloud Integration:** Learning Docker, Azure, and Dagster for scalable and efficient deployment of applications.
 - **Metadata Filtering Algorithms:** Improving precision in summarized research outputs.
 - **Automated Data Processing:** Using tools like ZenML and Prefect for efficient data handling.
 - **Streamlit Applications:** Developing user-friendly web applications for data visualization and interaction.
@@ -87,8 +88,8 @@ st.write("""
 *Aider Ventures, Indianapolis, IN*  
 *July 2024 – Present*
 
-- Develop automated pipelines using Haystack to fetch and summarize trending research papers, processing and summarizing over
-500 papers, ensuring efficient data handling and information retrieval from paperswithcode.com.
+- Develop automated pipelines using ChromaDB and FAISS Index Embeddings to fetch and summarize trending research papers,
+processing and summarizing over 2000 papers, ensuring efficient data handling and information retrieval from icml.cc.
 - Engineer scalable data pipelines leveraging ZenML and Prefect Python to analyze and classify over 10,000 research papers,
 enhancing the categorization process of AI and LLM datasets.
 - Implement metadata filtering algorithms in LangChain, improving the precision of summarized research outputs by 20%.
