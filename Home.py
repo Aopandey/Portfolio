@@ -60,7 +60,7 @@ for index, (platform, link) in enumerate(social_media.items()):
 st.write("---")
 st.subheader("Technical Skills")
 st.write("""
-- **Languages:** Python, SQL, R/R-Studio, Java, C++, C, JavaScript, CSS
+- **Languages:** Python, SQL, R/R-Studio, Java, C++, C, JavaScript, CSS 
 - **Framework and Libraries:** Gemini API, Pandas, PyTorch, TensorFlow, LangChain, Haystack, ZenML, Prefect, Tableau, PowerBI, Flask,
 Django, PyPDF2, Fitz, GitHub, AWS, Microsoft Azure, React, Redux, Express, PySimpleGUI, Paperetl, GROBID
 - **Database Management:**  MySQL, Microsoft SQL Server, Docker, Dagster, MongoDB, Azure Data Studio
