@@ -12,7 +12,7 @@ st.set_page_config(page_title=title)
 name = "Avinash Pandey"
 description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University"
                 ", Graduating December 2024.")
-description2 = "➡️ Software Development and Data Science Enthusiast."
+description2 = "➡️ Data Engineering and Software Development Enthusiast."
 email = "aopandey@purdue.edu"
 social_media = {
     "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
@@ -60,11 +60,10 @@ for index, (platform, link) in enumerate(social_media.items()):
 st.write("---")
 st.subheader("Technical Skills")
 st.write("""
-- **Languages:** Python, C, C++, JavaScript, CSS, Java, R/R-Studio, SQL
-- **Framework and Libraries:** LangChain, Haystack, ZenML, Prefect, React, Redux, Express, Django, 
-  Flask, PySimpleGUI, Pandas, Paperetl, GROBID, PyTorch, TensorFlow, GitHub, AWS, Microsoft Azure, 
-  PyCharm, Jupyter
-- **Database Management:** MySQL, MongoDB, Microsoft SQL Server, Azure Data Studio
+- **Languages:** Python, SQL, R/R-Studio, Java, C++, C, JavaScript, CSS
+- **Framework and Libraries:** Gemini API, Pandas, PyTorch, TensorFlow, LangChain, Haystack, ZenML, Prefect, Tableau, PowerBI, Flask,
+Django, PyPDF2, Fitz, GitHub, AWS, Microsoft Azure, React, Redux, Express, PySimpleGUI, Paperetl, GROBID
+- **Database Management:**  MySQL, Microsoft SQL Server, Docker, Dagster, MongoDB, Azure Data Studio
 """)
 
 # Concepts Learning
@@ -90,7 +89,7 @@ st.write("""
 
 - Develop automated pipelines using ChromaDB and FAISS Index Embeddings to fetch and summarize trending research papers,
 processing and summarizing over 2000 papers, ensuring efficient data handling and information retrieval from icml.cc.
-- Engineer scalable data pipelines leveraging ZenML and Prefect Python to analyze and classify over 10,000 research papers,
+- Engineer scalable data pipelines leveraging Gemini API, ZenML, and Prefect Python to analyze and classify over 10,000 research papers,
 enhancing the categorization process of AI and LLM datasets.
 - Implement metadata filtering algorithms in LangChain, improving the precision of summarized research outputs by 20%.
 - Focus on building scalable, DAG-based pipelines, employing advanced techniques to manage and process large datasets, reducing
