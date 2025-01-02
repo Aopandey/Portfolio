@@ -23,7 +23,7 @@ social_media = {
 with open("styles/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-with open("images/Avinash Pandey Resume A.pdf", "rb") as pdf_file:
+with open("images/Avinash Pandey Resume ML.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 
 profile_pic = Image.open("images/photo.jpg")
