@@ -60,10 +60,10 @@ for index, (platform, link) in enumerate(social_media.items()):
 st.write("---")
 st.subheader("Technical Skills")
 st.write("""
-- **Languages:** Python, SQL, R/R-Studio, Java, C++, C, JavaScript, CSS 
-- **Framework and Libraries:** Gemini API, Pandas, PyTorch, TensorFlow, LangChain, Haystack, ZenML, Prefect, Tableau, PowerBI, Flask,
-Django, PyPDF2, Fitz, GitHub, AWS, Microsoft Azure, React, Redux, Express, PySimpleGUI, Paperetl, GROBID
-- **Database Management:**  MySQL, Microsoft SQL Server, Docker, Dagster, MongoDB, Azure Data Studio
+- **Programming and Data management:** Python, SQL, R, Java, C++, JavaScript, SQL Server, ETL Pipelines
+- **Frameworks and Tools:** TensorFlow, PyTorch, Scikit-learn, Django, Pandas, NumPy, Tableau, Power BI, Git, GitHub
+- **Cloud and Big Data:** AWS (S3, Lambda, EC2), Azure Data Lake, Hadoop, Spark, Docker, Dagster
+- **Machine Learning and AI:** OpenAI API, Gemini API, LangChain, Hugging Face, FAISS, ChromaDB, ZenML, Haystack
 """)
 
 # Concepts Learning
@@ -87,22 +87,22 @@ st.write("""
 *Aider Ventures, Indianapolis, IN*  
 *July 2024 – Present*
 
-- Develop automated pipelines using ChromaDB and FAISS Index Embeddings to fetch and summarize trending research papers,
-processing and summarizing over 2000 papers, ensuring efficient data handling and information retrieval from icml.cc.
-- Engineer scalable data pipelines leveraging Gemini API, ZenML, and Prefect Python to analyze and classify over 10,000 research papers,
-enhancing the categorization process of AI and LLM datasets.
-- Implement metadata filtering algorithms in LangChain, improving the precision of summarized research outputs by 20%.
-- Focus on building scalable, DAG-based pipelines, employing advanced techniques to manage and process large datasets, reducing
-processing time by 40%, improving the efficiency of data workflows, and enabling rapid data analysis and decision-making.
-- Deploy a Streamlit-based application showcasing the developed application enhancing user engagement and accessibility.
+- Developed automated data pipelines using FAISS embeddings and ChromaDB to summarize over 2,600 research papers from
+ICML 2024, optimizing data handling and ensuring accurate information extraction from scraped source icml.cc
+- Engineered scalable pipelines leveraging Gemini API to process and classify over 10,000 research papers, improving the
+categorization process of datasets and increasing system efficiency by 40% through data processing techniques
+- Implemented metadata filtering algorithms in LangChain, improving precision of summarized research outputs by 20%
+- Constructed an interactive dashboard for visualizing and analyzing key insights like the number of papers by university and
+top research areas, enabling non-technical professionals to get insightful trends across over 10,000 papers
+
 
 **Business Analyst Intern – Office of Technology Services**  
 *Legislative Services Agency, Indianapolis, IN*  
 *December 2023 – March 2024*
 
-- Collaborated with software developers to support & troubleshoot critical software, achieving a 95% issue resolution rate.
-- Executed advanced data verification and timeliness assurance processes for the Indiana General Assembly, leveraging data analytics
-and quality control methodologies to maintain unparalleled data fidelity and promptness with a 98% accuracy rate.
-- Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff, optimizing
-business processes through problem resolution and the development of tailored applications and tools.
+- Collaborated with Software Developers and Business Analysts to support and troubleshoot internal software using tools like
+Tableau, SQL Server, and Power BI, achieving a 95% resolution rate
+- Executed data verification processes through ETL pipelines, ensuring 98% accuracy for Indiana General Assembly datasets
+- Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff,
+optimizing business processes through the development of tailored applications and problem resolution tools
 """)
