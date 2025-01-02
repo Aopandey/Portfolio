@@ -10,10 +10,10 @@ st.set_page_config(page_title=title)
 
 # Personal Information
 name = "Avinash Pandey"
-description1 = ("➡️ Senior Computer Science Student with a minor in Mathematics at Purdue University"
-                ", Graduating December 2024.")
-description2 = "➡️ Data Engineering and Software Development Enthusiast."
-email = "aopandey@purdue.edu"
+description1 = ("➡️ Computer Science Graduate with a minor in Mathematics from Purdue University"
+                ", Graduated December 2024.")
+description2 = "➡️ AI Engineering and Data Engineering Enthusiast."
+email = "aopandey24@gmail.com"
 social_media = {
     "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
     "GitHub": "https://github.com/Aopandey"
@@ -38,7 +38,7 @@ with col1:
     st.download_button(
         label="📁 Download Resume",
         data=PDFbyte,
-        file_name="Avinash Pandey Resume.pdf",
+        file_name="Avinash Pandey Resume ML.pdf",
         mime="application/octet-stream",
     )
     st.write(f"📧 Email: {email}")
