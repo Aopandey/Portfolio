@@ -38,7 +38,7 @@ with col1:
     st.download_button(
         label="📁 Download Resume",
         data=PDFbyte,
-        file_name="Avinash Pandey Resume ML.pdf",
+        file_name="Avinash Pandey Resume.pdf",
         mime="application/octet-stream",
     )
     st.write(f"📧 Email: {email}")
