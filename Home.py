@@ -15,7 +15,7 @@ description1 = ("➡️ Computer Science Graduate with a minor in Mathematics fr
 description2 = "➡️ AI Engineering and Data Engineering Enthusiast."
 email = "aopandey24@gmail.com"
 social_media = {
-    "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
+    "LinkedIns": "https://www.linkedin.com/in/avinashopandey/",
     "GitHub": "https://github.com/Aopandey"
 }
 
