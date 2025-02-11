@@ -163,7 +163,7 @@ st.subheader("📄 Resume")
 st.markdown("Choose a version of my resume to download:")
 col1, col2, col3 = st.columns(3)
 with col1:
-    with open("Avinash Pandey Resume DS.pdf", "rb") as file:
+    with open("images/Avinash Pandey Resume DS.pdf", "rb") as file:
         st.download_button("📥 General Resume", file, file_name="images/Avinash Pandey Resume DS.pdf")
 with col2:
     with open("Avinash Pandey Resume ML.pdf", "rb") as file:
