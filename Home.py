@@ -166,10 +166,10 @@ with col1:
     with open("images/Avinash Pandey Resume DS.pdf", "rb") as file:
         st.download_button("📥 General Resume", file, file_name="images/Avinash Pandey Resume DS.pdf")
 with col2:
-    with open("Avinash Pandey Resume ML.pdf", "rb") as file:
+    with open("images/Avinash Pandey Resume ML.pdf", "rb") as file:
         st.download_button("📥 Software Engineering Resume", file, file_name="images/Avinash Pandey Resume ML.pdf")
 with col3:
-    with open("Avinash Pandey Resume SWE.pdf", "rb") as file:
+    with open("images/Avinash Pandey Resume SWE.pdf", "rb") as file:
         st.download_button("📥 Data Science Resume", file, file_name="images/Avinash Pandey Resume SWE.pdf")
 
 # Contact Information
