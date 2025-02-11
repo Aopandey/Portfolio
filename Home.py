@@ -142,7 +142,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Create Two Columns for Name/Photo & Professional Summary
-col1, col2 = st.columns([1, 1])
+col1, col2 = st.columns([1.5, 2.5])
 
 with col1:
     st.title("Avinash Pandey")
@@ -161,16 +161,16 @@ with col2:
 # Resume Section
 st.subheader("📄 Resume")
 st.markdown("Choose a version of my resume to download:")
-col1, col2, col3 = st.columns(3)
-with col1:
+resume_col1, resume_col2, resume_col3 = st.columns(3)
+with resume_col1:
     with open("images/Avinash Pandey Resume DS.pdf", "rb") as file:
-        st.download_button("📥 General Resume", file, file_name="images/Avinash Pandey Resume DS.pdf")
-with col2:
+        st.download_button("📥 General Resume", file, file_name="Avinash_Pandey_Resume_General.pdf")
+with resume_col2:
     with open("images/Avinash Pandey Resume ML.pdf", "rb") as file:
-        st.download_button("📥 Software Engineering Resume", file, file_name="images/Avinash Pandey Resume ML.pdf")
-with col3:
+        st.download_button("📥 Software Engineering Resume", file, file_name="Avinash_Pandey_Resume_SWE.pdf")
+with resume_col3:
     with open("images/Avinash Pandey Resume SWE.pdf", "rb") as file:
-        st.download_button("📥 Data Science Resume", file, file_name="images/Avinash Pandey Resume SWE.pdf")
+        st.download_button("📥 Data Science Resume", file, file_name="Avinash_Pandey_Resume_DS.pdf")
 
 # Contact Information
 st.subheader("📬 Contact & Professional Platforms")
@@ -192,16 +192,17 @@ st.markdown("""
 st.subheader("💼 Work Experience")
 st.markdown("""
 <style>
-    .work-item:hover {
-        transform: translateY(-5px);
-        transition: all 0.3s ease-in-out;
-    }
     .work-item {
         padding: 10px;
-        border-radius: 8px;
         margin-bottom: 10px;
-        background-color: #f8f9fa;
-        border: 1px solid #ddd;
+        background-color: #1e1e1e;
+        color: white;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .work-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
     }
 </style>
 <div class='work-item'>
@@ -215,5 +216,3 @@ st.markdown("""
     - Published findings in IEEE AI Conference  
 </div>
 """, unsafe_allow_html=True)
-
-
