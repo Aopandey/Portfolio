@@ -35,15 +35,4 @@ hr {
     visibility: hidden;
 }
 
-st.markdown(
-    """
-    <style>
-    /* Hide the default sidebar */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    .css-1d391kg {display: none;} /* This may hide the multipage navigation sidebar */
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
