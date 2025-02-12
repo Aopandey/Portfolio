@@ -149,24 +149,24 @@ with col2:
 # Resumes
 st.write("---")
 st.subheader("Resume")
-st.columns.download_button(
+st.columns(st.download_button(
     label="📁 Data Science and Analysis Resume",
     data=PDFbyte,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
-)
+),
 st.download_button(
     label="📁 Data Engineering and Pipeline Resume",
     data=PDFbyte1,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
-)
+),
 st.download_button(
     label="📁 Software Engineering Resume",
     data=PDFbyte2,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
-)
+))
 
 
 # Social Media Links
