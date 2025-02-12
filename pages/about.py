@@ -57,4 +57,4 @@ def show_about():
         selected_index = col_center.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
 
         # Update the image according to the slider selection.
-        image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=300)
+        image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=500)
