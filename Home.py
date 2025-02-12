@@ -149,7 +149,7 @@ profile_pic = Image.open("images/photo.jpg")
 col_left, col_right = st.columns([1, 2])
 with col_left:
     st.title(name)
-    st.image(profile_pic, width=300)
+    st.image(profile_pic, width=400)
 with col_right:
     st.write(description1)
 
