@@ -93,10 +93,11 @@ def show_about():
             img = img.rotate(90, expand=True)
         images.append(img)
 
-    # Automatically refresh the page every 5 seconds and cycle through images.
-    # This returns a counter that increments every 5000 milliseconds.
-    count = st_autorefresh(interval=5000, limit=100, key="auto_refresh")
-    selected_index = count % len(images)
+    # # Automatically refresh the page every 5 seconds and cycle through images.
+    # # This returns a counter that increments every 5000 milliseconds.
+    # count = st_autorefresh(interval=5000, limit=100, key="auto_refresh")
+    # selected_index = count % len(images)
+    selected_index = st.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
 
     # Use a container with columns to center the image.
     with st.container():
