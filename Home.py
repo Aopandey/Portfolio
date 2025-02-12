@@ -12,6 +12,10 @@ spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
 projects = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(projects)
 
+spec = importlib.util.spec_from_file_location("about", "pages/about.py")
+about = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(about)
+
 # --- PAGE CONFIGURATION (Use wide layout so the header can span full width) ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
@@ -35,6 +39,10 @@ home_tab, projects_tab, about_tab = st.tabs(["Home", "Projects", "About Me"])
 
 with projects_tab:
     projects.show_projects()
+
+with about_tab:
+    about.show_about()
+
 
 # --- LOAD GLOBAL CSS (Your Provided Styles) ---
 with open("styles/main.css") as f:
