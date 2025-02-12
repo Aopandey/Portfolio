@@ -156,13 +156,13 @@ st.download_button(
     mime="application/octet-stream",
 )
 st.download_button(
-    label="📁 Download Resume",
+    label="📁 Data Engineering and Pipeline Resume",
     data=PDFbyte1,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
 )
 st.download_button(
-    label="📁 Download Resume",
+    label="📁 Software Engineering Resume",
     data=PDFbyte2,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
