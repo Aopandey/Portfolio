@@ -51,7 +51,7 @@ def show_about():
 
         # Display the image in the center column.
         image_placeholder = col_center.empty()
-        image_placeholder.image(images[0], caption="Photo 1", width=300)
+        image_placeholder.image(images[0], caption="Photo 1", width=500)
 
         # Place the slider inside the center column too.
         selected_index = col_center.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
