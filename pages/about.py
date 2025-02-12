@@ -10,10 +10,10 @@ def show_about():
     st.markdown("""
     <span style='font-size:1.1em;'>
     I wear multiple hats—part engineer, part problem solver. My journey from <span style='color:#1E90FF; font-weight:bold;'>India to Indiana</span> has been one of growth, resilience, and discovery, leading me to specialize in <span style='color:#FF6347; font-weight:bold;'>AI-driven data pipelines</span>, <span style='color:#FF6347; font-weight:bold;'>machine learning</span>, and <span style='color:#FF6347; font-weight:bold;'>data engineering</span>. On the technical front, I build scalable ETL pipelines, optimize AI retrieval models, and design interactive data visualizations. The data-driven side of me focuses on structuring unstructured data, improving model accuracy, and bridging the gap between AI and business strategy.
-    <br><br>
+    <br>
     My academic journey reflects my curiosity and adaptability. I earned a Bachelor’s degree in <span style='color:#1E90FF; font-weight:bold;'>Computer Science</span> with a <span style='color:#1E90FF; font-weight:bold;'>Minor in Mathematics</span> from <span style='color:#1E90FF; font-weight:bold;'>Purdue University</span>, an achievement that once felt like a distant dream. Originally starting in Computer Engineering, I soon realized that Computer Science was my true passion, leading me to pivot and explore AI, data engineering, and large-scale data processing.
     <br><br>
-    <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Leadership & Projects</span>
+    <span style='color:#1E90FF; font-size:1.5em; font-weight:bold;'>Leadership & Projects</span>
     <br><br>
     - Co-founded the Computer Science Club at Purdue Indianapolis, increasing engagement by <span style='color:#FF6347; font-weight:bold;'>100%</span> and organizing hackathons with <span style='color:#FF6347; font-weight:bold;'>200+ participants</span>.
     <br>
@@ -28,10 +28,11 @@ def show_about():
     I thrive at the intersection of AI, data, and real-world impact, always looking for ways to turn complex problems into practical, scalable solutions.
     </span>
     """, unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
 
     # Hobbies section
     st.header("Hobbies and Interests")
-    st.markdown("<br>", unsafe_allow_html=True)
+    # st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
     <span style='font-size:1.1em;'>
     Beyond my work in AI and data science, I have a deep love for sports, creativity, and adventure. You’ll often find me:
