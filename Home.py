@@ -135,7 +135,8 @@ col1, col2 = st.columns([3, 1], gap="small")
 
 with col1:
     st.title(name)
-    st.write(description1)
+    st.image(profile_pic)
+
     st.download_button(
         label="📁 Download Resume",
         data=PDFbyte,
@@ -148,7 +149,7 @@ with col1:
              "Feel free to contact me!🌟")
 
 with col2:
-    st.image(profile_pic)
+    st.write(description1)
 
 # Social Media Links
 st.write("---")
