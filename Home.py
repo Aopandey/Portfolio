@@ -127,9 +127,18 @@ In my AI & Data Science projects, I have developed predictive analytics models, 
 
 My expertise encompasses building AI-driven data solutions, developing scalable ETL workflows, and applying advanced analytics to real-world challenges. I excel at bridging business and data science, transforming data-driven questions into production-ready AI applications, and delivering insights that drive strategic decision-making.""")
 social_media = {
-    "Email": "aopandey24@gmail.com",
-    "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
-    "GitHub": "https://github.com/Aopandey"
+    "Email": {
+         "link": "mailto:aopandey24@gmail.com",
+         "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+    },
+    "LinkedIn": {
+         "link": "https://www.linkedin.com/in/avinashopandey/",
+         "icon": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+    },
+    "GitHub": {
+         "link": "https://github.com/Aopandey",
+         "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+    }
 }
 
 # --- LOAD RESOURCES ---
@@ -192,8 +201,15 @@ with content_col:
     st.write("---")
     st.subheader("Professional Platforms")
     platform_cols = st.columns(len(social_media))
-    for idx, (platform, link) in enumerate(social_media.items()):
-        platform_cols[idx].write(f"💻 [{platform}]({link})")
+    for idx, (platform, details) in enumerate(social_media.items()):
+        # Build the markdown string with an image and a link.
+        # The target='_blank' makes the link open in a new tab.
+        md = (
+            f"<a href='{details['link']}' target='_blank'>"
+            f"<img src='{details['icon']}' width='30' style='vertical-align: middle; margin-right: 10px;'>"
+            f"{platform}</a>"
+        )
+        platform_cols[idx].markdown(md, unsafe_allow_html=True)
 
     # TECHNICAL SKILLS SECTION
     st.write("---")
