@@ -162,7 +162,7 @@ with col_left:
     st.markdown("<h1 style='text-align: center;'>{}</h1>".format(name), unsafe_allow_html=True)
     spacer, image_col = st.columns([1, 4.5])
     with image_col:
-        st.image(profile_pic, width=300)
+        st.image(profile_pic, width=500)
 with col_right:
     st.markdown("<div style='margin-left: 100px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1), unsafe_allow_html=True)
 
