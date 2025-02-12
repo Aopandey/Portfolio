@@ -243,27 +243,49 @@ with content_col:
     - <span style='color:#FF6347; font-weight:bold;'>Visualization Tools:</span> Tableau, Power BI, Matplotlib, Seaborn  
     """, unsafe_allow_html=True)
 
+    import streamlit as st
+
     # WORK EXPERIENCE SECTION
     st.write("---")
-    st.subheader("Work Experience")
-    st.write("""
-    **Machine Learning Engineering Intern**  
-    *Aider Ventures, Indianapolis, IN*  
-    *July 2024 – Present*
+    st.subheader("Professional Experience")
+    st.markdown("""
+    <span style="font-size:1.1em;">
 
-    - Developed automated data pipelines using FAISS embeddings and ChromaDB to summarize over 2,600 research papers from ICML 2024, optimizing data handling and ensuring accurate information extraction from scraped source icml.cc.
-    - Engineered scalable pipelines leveraging Gemini API to process and classify over 10,000 research papers, improving the categorization process of datasets and increasing system efficiency by 40% through data processing techniques.
-    - Implemented metadata filtering algorithms in LangChain, improving precision of summarized research outputs by 20%.
-    - Constructed an interactive dashboard for visualizing and analyzing key insights like the number of papers by university and top research areas, enabling non-technical professionals to gain insightful trends across over 10,000 papers.
+    <strong>
+      <span style="color:#1E90FF; font-weight:bold;">Aider Ventures</span> | 
+      <span style="color:#1E90FF; font-weight:bold;">Machine Learning Engineering Intern</span> 
+      <span style="color:#1E90FF; font-weight:bold;">(July 2024 – Nov 2024)</span>
+    </strong>
+    <br><br>
+    - Developed and optimized an automated ETL pipeline that processed <span style="color:#FF6347; font-weight:bold;">10,000+ research papers</span> from <span style="color:#1E90FF; font-weight:bold;">ICML 2024</span>, leveraging <span style="color:#FF6347; font-weight:bold;">FAISS embeddings, ChromaDB, and LangChain</span> to convert unstructured research text into structured data, improving retrieval accuracy and metadata extraction by <span style="color:#FF6347; font-weight:bold;">20%</span>.
+    <br>
+    - Engineered scalable classification models using the <span style="color:#FF6347; font-weight:bold;">Gemini API</span>, improving content organization and research trend analysis by <span style="color:#FF6347; font-weight:bold;">40%</span>, enabling better semantic search and categorization of research insights.
+    <br>
+    - Implemented metadata filtering algorithms in <span style="color:#FF6347; font-weight:bold;">LangChain</span>, refining data enrichment processes and enhancing the precision of extracted insights by <span style="color:#FF6347; font-weight:bold;">20%</span> to improve downstream AI applications.
+    <br>
+    - Built an interactive data visualization framework to analyze AI research trends, presenting insights on top universities, research areas, and general topic distributions to help non-technical stakeholders identify startup and collaboration opportunities.
+    <br>
+    - Optimized data processing pipelines using containerization (<span style="color:#FF6347; font-weight:bold;">Docker, Kubernetes</span>), ensuring scalability and efficient deployment of AI-driven solutions.
+    <br><br>
 
-    **Business Analyst Intern – Office of Technology Services**  
-    *Legislative Services Agency, Indianapolis, IN*  
-    *December 2023 – March 2024*
-
-    - Collaborated with Software Developers and Business Analysts to support and troubleshoot internal software using tools like Tableau, SQL Server, and Power BI, achieving a 95% resolution rate.
-    - Executed data verification processes through ETL pipelines, ensuring 98% accuracy for Indiana General Assembly datasets.
-    - Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff, optimizing business processes through the development of tailored applications and problem resolution tools.
-    """)
+    <strong>
+      <span style="color:#1E90FF; font-weight:bold;">Legislative Services Agency</span> | 
+      <span style="color:#1E90FF; font-weight:bold;">Business Analyst Intern</span> 
+      <span style="color:#1E90FF; font-weight:bold;">(Dec 2023 – Mar 2024)</span>
+    </strong>
+    <br><br>
+    - Designed and managed SQL-based ETL workflows, achieving <span style="color:#FF6347; font-weight:bold;">98% data accuracy</span> in validating and preprocessing Indiana General Assembly datasets.
+    <br>
+    - Developed and optimized SQL queries to enhance data extraction, transformation, and loading (ETL) efficiency for legislative reports and bill tracking.
+    <br>
+    - Built Power BI and Tableau dashboards, enabling real-time business intelligence reporting and improving legislative data analysis for decision-makers.
+    <br>
+    - Automated data validation and reporting pipelines, significantly reducing manual data processing workloads and improving reporting efficiency.
+    <br>
+    - Provided technical support and troubleshooting for legislative data systems, ensuring seamless integration of business intelligence tools for data-driven policy analysis.
+    <br>
+    </span>
+    """, unsafe_allow_html=True)
 
 # import streamlit as st
 #
