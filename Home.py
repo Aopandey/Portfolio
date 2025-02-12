@@ -95,9 +95,6 @@
 # """)
 
 import streamlit as st
-import pandas as pd
-import base64
-from pathlib import Path
 from PIL import Image
 
 # Page Configuration
@@ -106,7 +103,7 @@ st.set_page_config(page_title=title)
 
 # Personal Information
 name = "Avinash Pandey"
-description1 = ("""➡️ I have a strong curiosity for leveraging AI, Machine Learning, and Data Engineering to develop scalable data pipelines, optimize AI-driven workflows, and extract meaningful insights from unstructured data. My expertise lies in building efficient data infrastructure, integrating AI with real-world applications, and transforming complex datasets into actionable intelligence.
+description1 = ("""➡️ I have a strong curiosity for leveraging AI, Machine Learning, and Data Engineering to develop scalable data pipelines, optimize AI-driven workflows, and extract meaningful insights from unstructured data. 
 
 Most recently, as a Machine Learning Engineering Intern at Aider Ventures (Nienna Lab), I developed an automated ETL pipeline that processed 10,000+ research papers, leveraging FAISS embeddings, ChromaDB, and LangChain to improve retrieval accuracy and metadata extraction by 20%. I also built interactive data visualization frameworks to analyze trends in AI research, providing structured insights for non-technical stakeholders.
 
@@ -115,7 +112,6 @@ Previously, at Legislative Services Agency, I designed SQL-based ETL workflows t
 In my AI & Data Science projects, I have developed predictive analytics models, including an AI-driven diabetes prediction pipeline that achieved 97% recall and 95% ROC AUC, optimizing feature engineering with SMOTE and deep learning architectures. Additionally, I built an NLP-powered mutual learning framework for news classification, integrating Multinomial Naïve Bayes, SVMs, and neural networks, achieving 98% accuracy.
 
 My expertise encompasses building AI-driven data solutions, developing scalable ETL workflows, and applying advanced analytics to real-world challenges. I excel at bridging business and data science, transforming data-driven questions into production-ready AI applications, and delivering insights that drive strategic decision-making.""")
-
 social_media = {
     "Email": "aopandey24@gmail.com",
     "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
@@ -130,92 +126,92 @@ with open("images/Avinash Pandey Resume DS.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 with open("images/Avinash Pandey Resume DE.pdf", "rb") as pdf_file:
     PDFbyte1 = pdf_file.read()
-
 with open("images/Avinash Pandey Resume SWE.pdf", "rb") as pdf_file:
     PDFbyte2 = pdf_file.read()
 
 profile_pic = Image.open("images/photo.jpg")
 
-# Layout
-col1, col2 = st.columns([3, 1], gap="small")
+# --- HEADER SECTION (Full Width) ---
+st.title(name)
+st.image(profile_pic)
+st.write(description1)
 
-with col1:
-    st.title(name)
-    st.image(profile_pic)
-
-with col2:
-    st.write(description1)
-
-# Resumes
+# --- RESUME SECTION (Download Buttons in Columns) ---
 st.write("---")
 st.subheader("Resume")
-st.download_button(
-    label="📁 Data Science and Analysis Resume",
-    data=PDFbyte,
-    file_name="Avinash Pandey Resume.pdf",
-    mime="application/octet-stream",
-)
-st.download_button(
-    label="📁 Data Engineering and Pipeline Resume",
-    data=PDFbyte1,
-    file_name="Avinash Pandey Resume.pdf",
-    mime="application/octet-stream",
-)
-st.download_button(
-    label="📁 Software Engineering Resume",
-    data=PDFbyte2,
-    file_name="Avinash Pandey Resume.pdf",
-    mime="application/octet-stream",
-)
 
+# Create three columns for the three resume download buttons
+col1, col2, col3 = st.columns(3)
 
-# Social Media Links
+with col1:
+    st.download_button(
+        label="📁 Data Science and Analysis Resume",
+        data=PDFbyte,
+        file_name="Avinash Pandey Resume.pdf",
+        mime="application/octet-stream",
+    )
+with col2:
+    st.download_button(
+        label="📁 Data Engineering and Pipeline Resume",
+        data=PDFbyte1,
+        file_name="Avinash Pandey Resume.pdf",
+        mime="application/octet-stream",
+    )
+with col3:
+    st.download_button(
+        label="📁 Software Engineering Resume",
+        data=PDFbyte2,
+        file_name="Avinash Pandey Resume.pdf",
+        mime="application/octet-stream",
+    )
+
+# --- PROFESSIONAL PLATFORMS SECTION ---
 st.write("---")
 st.subheader("Professional Platforms")
 cols = st.columns(len(social_media))
 for index, (platform, link) in enumerate(social_media.items()):
-    cols[index].write(f"💻[{platform}]({link})")
+    cols[index].write(f"💻 [{platform}]({link})")
 
-# Technical Skills
+# --- TECHNICAL SKILLS ---
 st.write("---")
 st.subheader("Technical Skills")
 st.write("""
 - **Programming Languages & Development:** Python, Java, C++, JavaScript, TypeScript, R, Flask, FastAPI, Django, Node.js, ReactJS
 - **Data Science & AI Development:**
-- *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib
-- *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)
-- *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
+  - *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib
+  - *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)
+  - *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
 - **Cloud and Big Data:** AWS (S3, Lambda, EC2), Azure Data Lake, Hadoop, Spark, Docker, Dagster
 - **Machine Learning and AI:** OpenAI API, Gemini API, LangChain, Hugging Face, FAISS, ChromaDB, ZenML, Haystack
 """)
 
-# Work Experience
+# --- WORK EXPERIENCE ---
 st.write("---")
 st.subheader("Work Experience")
 st.write("""
-**Machine Learning Engineering Intern**
-*Aider Ventures, Indianapolis, IN*
+**Machine Learning Engineering Intern**  
+*Aider Ventures, Indianapolis, IN*  
 *July 2024 – Present*
 
 - Developed automated data pipelines using FAISS embeddings and ChromaDB to summarize over 2,600 research papers from
-ICML 2024, optimizing data handling and ensuring accurate information extraction from scraped source icml.cc
+ICML 2024, optimizing data handling and ensuring accurate information extraction from scraped source icml.cc.
 - Engineered scalable pipelines leveraging Gemini API to process and classify over 10,000 research papers, improving the
-categorization process of datasets and increasing system efficiency by 40% through data processing techniques
-- Implemented metadata filtering algorithms in LangChain, improving precision of summarized research outputs by 20%
+categorization process of datasets and increasing system efficiency by 40% through data processing techniques.
+- Implemented metadata filtering algorithms in LangChain, improving precision of summarized research outputs by 20%.
 - Constructed an interactive dashboard for visualizing and analyzing key insights like the number of papers by university and
-top research areas, enabling non-technical professionals to get insightful trends across over 10,000 papers
+top research areas, enabling non-technical professionals to gain insightful trends across over 10,000 papers.
 
-
-**Business Analyst Intern – Office of Technology Services**
-*Legislative Services Agency, Indianapolis, IN*
+**Business Analyst Intern – Office of Technology Services**  
+*Legislative Services Agency, Indianapolis, IN*  
 *December 2023 – March 2024*
 
 - Collaborated with Software Developers and Business Analysts to support and troubleshoot internal software using tools like
-Tableau, SQL Server, and Power BI, achieving a 95% resolution rate
-- Executed data verification processes through ETL pipelines, ensuring 98% accuracy for Indiana General Assembly datasets
+Tableau, SQL Server, and Power BI, achieving a 95% resolution rate.
+- Executed data verification processes through ETL pipelines, ensuring 98% accuracy for Indiana General Assembly datasets.
 - Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff,
-optimizing business processes through the development of tailored applications and problem resolution tools
+optimizing business processes through the development of tailored applications and problem resolution tools.
 """)
+
 
 # import streamlit as st
 #
