@@ -149,7 +149,7 @@ profile_pic = Image.open("images/photo.jpg")
 col_left, col_right = st.columns([1, 2])
 with col_left:
     st.markdown("<h1 style='text-align: center;'>{}</h1>".format(name), unsafe_allow_html=True)
-    spacer, image_col = st.columns([1, 4])
+    spacer, image_col = st.columns([1, 4.5])
     with image_col:
         st.image(profile_pic, width=400)
 with col_right:
