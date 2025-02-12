@@ -19,8 +19,8 @@ st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 st.markdown(
     """
     <style>
-    [data-testid="stSidebar"] {
-        display: none;
+    [data-testid="collapsedControl"] {
+        display: none !important;
     }
     </style>
     """,
