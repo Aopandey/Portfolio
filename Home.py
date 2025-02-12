@@ -175,7 +175,7 @@ left_spacer, content_col, right_spacer = st.columns([1, 3, 1])
 with content_col:
     # RESUME SECTION
     st.write("---")
-    st.markdown("<h2 style='text-align: center; font-size:2.5em;'>Resume</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='font-size:2.5em;'>Resume</h2>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col1:
         st.download_button(
