@@ -24,22 +24,23 @@ st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 st.markdown(
     """
     <style>
-    /* Remove extra top margin/padding from the main container's first child */
-    [data-testid="stAppViewContainer"] > div:first-child {
-        margin-top: 0 !important;
+    /* Remove any top padding from the main container */
+    [data-testid="stAppViewContainer"] {
         padding-top: 0 !important;
+        margin-top: 0 !important;
     }
-    /* Hide the sidebar toggle button/control */
+    /* Hide the sidebar toggle button by trying several selectors */
+    button[aria-label="Toggle sidebar"],
+    button[title="Toggle sidebar"],
+    button[data-testid="stSidebarCollapse"],
     [data-testid="collapsedControl"] {
-        display: none !important;
-    }
-    button[title="Toggle sidebar"] {
         display: none !important;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # --- CREATE TABS ---
 home_tab, projects_tab, about_tab = st.tabs(["Home", "Projects", "About Me"])
