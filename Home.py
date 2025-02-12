@@ -149,11 +149,11 @@ profile_pic = Image.open("images/photo.jpg")
 col_left, col_right = st.columns([1, 2])
 with col_left:
     st.markdown("<h1 style='text-align: center;'>{}</h1>".format(name), unsafe_allow_html=True)
-    spacer, image_col = st.columns([1, 3])
+    spacer, image_col = st.columns([1, 4])
     with image_col:
         st.image(profile_pic, width=400)
 with col_right:
-    st.markdown("<div style='margin-left: -100px; margin-top: 70px;'>{}</div>".format(description1), unsafe_allow_html=True)
+    st.markdown("<div style='margin-left: -60px; margin-top: 70px;'>{}</div>".format(description1), unsafe_allow_html=True)
 
 # --- NARROW CONTENT AREA (Using Columns) ---
 # Create three columns: left spacer, center content, and right spacer.
