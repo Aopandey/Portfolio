@@ -7,6 +7,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import importlib.util
+from PIL import Image
 
 import Home
 
@@ -23,23 +24,23 @@ spec.loader.exec_module(about)
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
 # --- CUSTOM CSS to remove any default padding/margin (optional) ---
-st.markdown(
-    """
-    <style>
-    /* Remove any extra top spacing from the main container */
-    [data-testid="stAppViewContainer"] {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-    }
-    /* Hide any default sidebar toggle button */
-    button[title="Toggle sidebar"],
-    [data-testid="collapsedControl"] {
-        display: none !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#     /* Remove any extra top spacing from the main container */
+#     [data-testid="stAppViewContainer"] {
+#         padding-top: 0 !important;
+#         margin-top: 0 !important;
+#     }
+#     /* Hide any default sidebar toggle button */
+#     button[title="Toggle sidebar"],
+#     [data-testid="collapsedControl"] {
+#         display: none !important;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 # --- TOP NAVIGATION using streamlit_option_menu (horizontal) ---
 selected = option_menu(
