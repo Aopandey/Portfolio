@@ -7,19 +7,19 @@ import importlib.util
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
 # --- LOAD GLOBAL CSS (Your Provided Styles) ---
-# with open("styles/main.css") as f:
-#     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+with open("styles/main.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # --- HIDE SIDEBAR COMPLETELY ---
-st.markdown(
-    """
-    <style>
-    [data-testid="stSidebar"] {display: none !important;}
-    [data-testid="collapsedControl"] {display: none !important;}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#     [data-testid="stSidebar"] {display: none !important;}
+#     [data-testid="collapsedControl"] {display: none !important;}
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 # --- ADDITIONAL CUSTOM CSS ---
 st.markdown(
     """
