@@ -199,13 +199,27 @@ with content_col:
     st.write("---")
     st.subheader("Technical Skills")
     st.write("""
-    - **Programming Languages & Development:** Python, Java, C++, JavaScript, TypeScript, R, Flask, FastAPI, Django, Node.js, ReactJS
-    - **Data Science & AI Development:**
-      - *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib
-      - *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)
-      - *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
-    - **Cloud and Big Data:** AWS (S3, Lambda, EC2), Azure Data Lake, Hadoop, Spark, Docker, Dagster
-    - **Machine Learning and AI:** OpenAI API, Gemini API, LangChain, Hugging Face, FAISS, ChromaDB, ZenML, Haystack
+    - **Programming Languages & Development:**  
+      Python, Java, C++, JavaScript, TypeScript, R  
+      Flask, FastAPI, Django, Node.js, ReactJS
+
+    - **Data Science & AI Development:**  
+      *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib  
+      *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)  
+      *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
+
+    - **Big Data, Cloud & ETL:**  
+      *Databases:* MySQL, MongoDB, DynamoDB, SQL Server  
+      *Cloud & DevOps:* AWS (EC2, S3, Lambda), Docker, Kubernetes  
+      *Data Engineering:* FAISS, ChromaDB, Data Warehousing, ETL Pipelines, Data Orchestration, Streaming Data Processing, Dagster
+
+    - **Software Engineering & System Design:**  
+      RESTful APIs, GraphQL, Git, GitHub Actions, Jenkins, CI/CD Pipelines  
+      *System Design:* Scalability, Microservices, Load Balancing, Caching Strategies, API Optimization, Performance Tuning
+
+    - **Data Visualization & Business Intelligence:**  
+      Tableau, Power BI  
+      Matplotlib, Seaborn
     """)
 
     # WORK EXPERIENCE SECTION
