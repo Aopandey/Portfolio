@@ -157,7 +157,7 @@ with col_right:
 
 # --- NARROW CONTENT AREA (Using Columns) ---
 # Create three columns: left spacer, center content, and right spacer.
-left_spacer, content_col, right_spacer = st.columns([1, 4, 1])
+left_spacer, content_col, right_spacer = st.columns([1, 3, 1])
 
 with content_col:
     # RESUME SECTION
