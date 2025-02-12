@@ -115,8 +115,9 @@ Previously, at Legislative Services Agency, I designed SQL-based ETL workflows t
 In my AI & Data Science projects, I have developed predictive analytics models, including an AI-driven diabetes prediction pipeline that achieved 97% recall and 95% ROC AUC, optimizing feature engineering with SMOTE and deep learning architectures. Additionally, I built an NLP-powered mutual learning framework for news classification, integrating Multinomial Naïve Bayes, SVMs, and neural networks, achieving 98% accuracy.
 
 My expertise encompasses building AI-driven data solutions, developing scalable ETL workflows, and applying advanced analytics to real-world challenges. I excel at bridging business and data science, transforming data-driven questions into production-ready AI applications, and delivering insights that drive strategic decision-making.""")
-email = "aopandey24@gmail.com"
+
 social_media = {
+    "Email": "aopandey24@gmail.com",
     "LinkedIn": "https://www.linkedin.com/in/avinashopandey/",
     "GitHub": "https://github.com/Aopandey"
 }
@@ -131,14 +132,14 @@ with open("images/Avinash Pandey Resume DS.pdf", "rb") as pdf_file:
 profile_pic = Image.open("images/photo.jpg")
 
 # Layout
-# col1, col2 = st.columns([3, 1], gap="small")
-#
-# with col1:
-#     st.title(name)
-#     st.image(profile_pic)
-#
-# with col2:
-#     st.write(description1)
+col1, col2 = st.columns([3, 1], gap="small")
+
+with col1:
+    st.title(name)
+    st.image(profile_pic)
+
+with col2:
+    st.write(description1)
 
 # Resumes
 st.write("---")
@@ -154,7 +155,6 @@ st.download_button(
 # Social Media Links
 st.write("---")
 st.subheader("Professional Platforms")
-st.write(f"📧 Email: {email}")
 cols = st.columns(len(social_media))
 for index, (platform, link) in enumerate(social_media.items()):
     cols[index].write(f"💻[{platform}]({link})")
