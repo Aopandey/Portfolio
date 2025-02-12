@@ -198,28 +198,28 @@ with content_col:
     # TECHNICAL SKILLS SECTION
     st.write("---")
     st.subheader("Technical Skills")
-    st.write("""
-    - **Programming Languages & Development:**  
-      Python, Java, C++, JavaScript, TypeScript, R  
-      Flask, FastAPI, Django, Node.js, ReactJS
 
-    - **Data Science & AI Development:**  
-      *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib  
-      *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)  
-      *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
+    st.markdown("""
+    **Programming Languages & Development**  
+    - **Languages:** Python, Java, C++, JavaScript, TypeScript, R  
+    - **Frameworks & Libraries:** Flask, FastAPI, Django, Node.js, ReactJS  
 
-    - **Big Data, Cloud & ETL:**  
-      *Databases:* MySQL, MongoDB, DynamoDB, SQL Server  
-      *Cloud & DevOps:* AWS (EC2, S3, Lambda), Docker, Kubernetes  
-      *Data Engineering:* FAISS, ChromaDB, Data Warehousing, ETL Pipelines, Data Orchestration, Streaming Data Processing, Dagster
+    **Data Science & AI Development**  
+    - **Machine Learning:** Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib  
+    - **Deep Learning:** Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)  
+    - **Applications:** Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation  
 
-    - **Software Engineering & System Design:**  
-      RESTful APIs, GraphQL, Git, GitHub Actions, Jenkins, CI/CD Pipelines  
-      *System Design:* Scalability, Microservices, Load Balancing, Caching Strategies, API Optimization, Performance Tuning
+    **Big Data, Cloud & ETL**  
+    - **Databases:** MySQL, MongoDB, DynamoDB, SQL Server  
+    - **Cloud & DevOps:** AWS (EC2, S3, Lambda), Docker, Kubernetes  
+    - **Data Engineering:** FAISS, ChromaDB, Data Warehousing, ETL Pipelines, Data Orchestration, Streaming Data Processing, Dagster  
 
-    - **Data Visualization & Business Intelligence:**  
-      Tableau, Power BI  
-      Matplotlib, Seaborn
+    **Software Engineering & System Design**  
+    - **Development Tools:** RESTful APIs, GraphQL, Git, GitHub Actions, Jenkins, CI/CD Pipelines  
+    - **System Design:** Scalability, Microservices, Load Balancing, Caching Strategies, API Optimization, Performance Tuning  
+
+    **Data Visualization & Business Intelligence**  
+    - **Visualization Tools:** Tableau, Power BI, Matplotlib, Seaborn  
     """)
 
     # WORK EXPERIENCE SECTION
