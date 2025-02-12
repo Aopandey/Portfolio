@@ -137,23 +137,24 @@ with col1:
     st.title(name)
     st.image(profile_pic)
 
-    st.download_button(
-        label="📁 Download Resume",
-        data=PDFbyte,
-        file_name="Avinash Pandey Resume.pdf",
-        mime="application/octet-stream",
-    )
-    st.write(f"📧 Email: {email}")
-    #st.write("----")
-    st.write("🌟Explore the website to learn more about the projects I've done to demonstrate my skills. "
-             "Feel free to contact me!🌟")
-
 with col2:
     st.write(description1)
+
+# Resumes
+st.write("---")
+st.subheader("Resume")
+st.download_button(
+    label="📁 Download Resume",
+    data=PDFbyte,
+    file_name="Avinash Pandey Resume.pdf",
+    mime="application/octet-stream",
+)
+
 
 # Social Media Links
 st.write("---")
 st.subheader("Professional Platforms")
+st.write(f"📧 Email: {email}")
 cols = st.columns(len(social_media))
 for index, (platform, link) in enumerate(social_media.items()):
     cols[index].write(f"💻[{platform}]({link})")
