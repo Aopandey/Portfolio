@@ -1,60 +1,25 @@
-# import streamlit as st
-# import pandas as pd
-# import base64
-# from pathlib import Path
-# from PIL import Image
-
 import streamlit as st
+from streamlit_option_menu import option_menu
 from PIL import Image
 import importlib.util
 
-# Dynamically import pages
-spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
-projects = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(projects)
-
-spec = importlib.util.spec_from_file_location("about", "pages/about.py")
-about = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(about)
-
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
-
-# --- CUSTOM CSS to move navigation to the top and disable the sidebar toggle ---
-st.markdown(
-    """
-    <style>
-    /* Remove any top padding from the main container */
-    [data-testid="stAppViewContainer"] {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-    }
-    /* Hide the sidebar toggle button by trying several selectors */
-    button[aria-label="Toggle sidebar"],
-    button[title="Toggle sidebar"],
-    button[data-testid="stSidebarCollapse"],
-    [data-testid="collapsedControl"] {
-        display: none !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
-# --- CREATE TABS ---
-home_tab, projects_tab, about_tab = st.tabs(["Home", "Projects", "About Me"])
-
-with projects_tab:
-    projects.show_projects()
-
-with about_tab:
-    about.show_about()
 
 # --- LOAD GLOBAL CSS (Your Provided Styles) ---
 with open("styles/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+# --- HIDE SIDEBAR COMPLETELY ---
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {display: none !important;}
+    [data-testid="collapsedControl"] {display: none !important;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # --- ADDITIONAL CUSTOM CSS ---
 st.markdown(
     """
@@ -69,7 +34,33 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-with home_tab:
+# --- NAVIGATION MENU ---
+selected = option_menu(
+    None, ["Home", "Projects", "About Me"],
+    icons=["house", "code", "person"],
+    menu_icon="cast", default_index=0, orientation="horizontal",
+    styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "#1E90FF", "font-size": "20px"},
+        "nav-link": {"font-size": "18px", "text-align": "center", "margin":"0px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "#1E90FF", "color": "white"},
+    }
+)
+
+# --- DYNAMIC PAGE LOADING ---
+if selected == "Projects":
+    spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
+    projects = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(projects)
+    projects.show_projects()
+
+elif selected == "About Me":
+    spec = importlib.util.spec_from_file_location("about", "pages/about.py")
+    about = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(about)
+    about.show_about()
+
+else:
     # --- PERSONAL INFORMATION (Header Section) ---
     name = "Avinash Pandey"
     description1 = ("""\
