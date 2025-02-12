@@ -103,16 +103,14 @@ else:
         with content_col:
             inner_col1, inner_col2 = st.columns([1, 2])  # Photo on left, description on right
 
-            with content_col:
-                st.markdown(f"<h1 style='text-align: left; margin-bottom: 20px;'>{name}</h1>", unsafe_allow_html=True)
-                inner_col1, inner_col2 = st.columns([1, 2])  # Photo on left, description on right
+            with inner_col1:
+                st.markdown("<br><br><br><br>", unsafe_allow_html=True)
+                st.image(profile_pic, width=500)  # Adjusted width to fit properly
 
-                with inner_col1:
-                    st.markdown("<br><br>", unsafe_allow_html=True)  # Push image down
-                    st.image(profile_pic, width=450)  # Adjusted width to fit properly
-
-                with inner_col2:
-                    st.markdown(description1, unsafe_allow_html=True)
+            with inner_col2:
+                st.markdown(f"<h1 style='margin-left: 78px;margin-bottom: 10px;'>{name}</h1>", unsafe_allow_html=True)
+                st.markdown("<br>", unsafe_allow_html=True)
+                st.markdown(description1, unsafe_allow_html=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
 
