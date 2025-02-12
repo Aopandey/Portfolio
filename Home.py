@@ -10,6 +10,11 @@ from PIL import Image
 # --- PAGE CONFIGURATION (Use wide layout so the header can span full width) ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
+home_tab, projects_tab, about_tab = st.tabs(["Home", "Projects", "About Me"])
+
+with projects_tab:
+    st.write("Here are my Projects:")
+
 # --- LOAD GLOBAL CSS (Your Provided Styles) ---
 with open("styles/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
