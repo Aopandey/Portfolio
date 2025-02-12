@@ -228,7 +228,7 @@ with content_col:
     <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Data Science & AI Development</span>  
     - <span style='color:#FF6347; font-weight:bold;'>Machine Learning:</span> Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib  
     - <span style='color:#FF6347; font-weight:bold;'>Deep Learning:</span> Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)  
-    - <span style='color:#FF6347; font-weight:bold;'>Applications:</span> Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation  
+    - <span style='color:#FF6347; font-weight:bold;'>AI Applications:</span> Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation  
 
     <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Big Data, Cloud & ETL</span>  
     - <span style='color:#FF6347; font-weight:bold;'>Databases:</span> MySQL, MongoDB, DynamoDB, SQL Server  
