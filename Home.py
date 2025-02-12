@@ -8,6 +8,7 @@ import streamlit as st
 from PIL import Image
 import importlib.util
 
+# Dynamically import pages
 spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
 projects = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(projects)
@@ -16,20 +17,22 @@ spec = importlib.util.spec_from_file_location("about", "pages/about.py")
 about = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(about)
 
-# --- PAGE CONFIGURATION (Use wide layout so the header can span full width) ---
+# --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
-
-# Hide the default sidebar (Option 1: hide entire sidebar)
+# --- CUSTOM CSS to move navigation to the top and disable the sidebar toggle ---
 st.markdown(
     """
     <style>
-    /* Remove extra top padding from the main app container */
-    [data-testid="stAppViewContainer"] {
-        padding-top: 0px;
+    /* Remove extra top margin/padding from the main container's first child */
+    [data-testid="stAppViewContainer"] > div:first-child {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
-
-    /* Hide the sidebar toggle button (which usually has the title "Toggle sidebar") */
+    /* Hide the sidebar toggle button/control */
+    [data-testid="collapsedControl"] {
+        display: none !important;
+    }
     button[title="Toggle sidebar"] {
         display: none !important;
     }
@@ -38,6 +41,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# --- CREATE TABS ---
 home_tab, projects_tab, about_tab = st.tabs(["Home", "Projects", "About Me"])
 
 with projects_tab:
@@ -46,13 +50,13 @@ with projects_tab:
 with about_tab:
     about.show_about()
 
-
 # --- LOAD GLOBAL CSS (Your Provided Styles) ---
 with open("styles/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # --- ADDITIONAL CUSTOM CSS ---
-st.markdown("""
+st.markdown(
+    """
     <style>
     /* Smaller download buttons */
     div.stDownloadButton > button {
@@ -60,8 +64,9 @@ st.markdown("""
         font-size: 0.8em;
     }
     </style>
-    """, unsafe_allow_html=True)
-
+    """,
+    unsafe_allow_html=True
+)
 
 with home_tab:
     # --- PERSONAL INFORMATION (Header Section) ---
@@ -79,16 +84,16 @@ with home_tab:
     """)
     social_media = {
         "Email": {
-             "link": "mailto:aopandey24@gmail.com",
-             "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+            "link": "mailto:aopandey24@gmail.com",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
         },
         "LinkedIn": {
-             "link": "https://www.linkedin.com/in/avinashopandey/",
-             "icon": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            "link": "https://www.linkedin.com/in/avinashopandey/",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
         },
         "GitHub": {
-             "link": "https://github.com/Aopandey",
-             "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            "link": "https://github.com/Aopandey",
+            "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
         }
     }
 
@@ -103,9 +108,6 @@ with home_tab:
     profile_pic = Image.open("images/photo.jpg")
 
     # --- HEADER SECTION (FULL WIDTH) ---
-    # Create two columns so that the header spans the full page width.
-    # Left column: Name and photo (stacked)
-    # Right column: Description (aligned at the top)
     col_left, col_right = st.columns([1, 2])
     with col_left:
         st.markdown("<div style='margin-left: 350px;'><h1 style='text-align: center;'>{}</h1></div>".format(name),
@@ -114,14 +116,14 @@ with home_tab:
         with image_col:
             st.image(profile_pic, width=500)
     with col_right:
-        st.markdown("<div style='margin-left: 200px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1), unsafe_allow_html=True)
+        st.markdown(
+            "<div style='margin-left: 200px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1),
+            unsafe_allow_html=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
 
     # --- NARROW CONTENT AREA (Using Columns) ---
-    # Create three columns: left spacer, center content, and right spacer.
     left_spacer, content_col, right_spacer = st.columns([1, 3, 1])
-
     with content_col:
         # RESUME SECTION
         st.write("---")
@@ -156,8 +158,6 @@ with home_tab:
         st.markdown("<br>", unsafe_allow_html=True)
         platform_cols = st.columns(len(social_media))
         for idx, (platform, details) in enumerate(social_media.items()):
-            # Build the markdown string with an image and a link.
-            # The target='_blank' makes the link open in a new tab.
             md = (
                 f"<a href='{details['link']}' target='_blank'>"
                 f"<img src='{details['icon']}' width='30' style='vertical-align: middle; margin-right: 10px;'>"
@@ -174,21 +174,21 @@ with home_tab:
         <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Programming Languages & Development</span>  
         - <span style='color:#FF6347; font-weight:bold;'>Languages:</span> Python, Java, C++, JavaScript, TypeScript, R  
         - <span style='color:#FF6347; font-weight:bold;'>Frameworks & Libraries:</span> Flask, FastAPI, Django, Node.js, ReactJS  
-    
+
         <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Data Science & AI Development</span>  
         - <span style='color:#FF6347; font-weight:bold;'>Machine Learning:</span> Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib  
         - <span style='color:#FF6347; font-weight:bold;'>Deep Learning:</span> Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)  
         - <span style='color:#FF6347; font-weight:bold;'>AI Applications:</span> Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation  
-    
+
         <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Big Data, Cloud & ETL</span>  
         - <span style='color:#FF6347; font-weight:bold;'>Databases:</span> MySQL, MongoDB, DynamoDB, SQL Server  
         - <span style='color:#FF6347; font-weight:bold;'>Cloud & DevOps:</span> AWS (EC2, S3, Lambda), Docker, Kubernetes  
         - <span style='color:#FF6347; font-weight:bold;'>Data Engineering:</span> FAISS, ChromaDB, Data Warehousing, ETL Pipelines, Data Orchestration, Streaming Data Processing, Dagster  
-    
+
         <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Software Engineering & System Design</span>  
         - <span style='color:#FF6347; font-weight:bold;'>Development Tools:</span> RESTful APIs, GraphQL, Git, GitHub Actions, Jenkins, CI/CD Pipelines  
         - <span style='color:#FF6347; font-weight:bold;'>System Design:</span> Scalability, Microservices, Load Balancing, Caching Strategies, API Optimization, Performance Tuning  
-    
+
         <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Data Visualization & Business Intelligence</span>  
         - <span style='color:#FF6347; font-weight:bold;'>Visualization Tools:</span> Tableau, Power BI, Matplotlib, Seaborn  
         """, unsafe_allow_html=True)
@@ -206,9 +206,9 @@ with home_tab:
         - Built an interactive data visualization framework to analyze AI research trends, presenting insights on top universities, research areas, and general topic distributions to help non-technical stakeholders identify startup and collaboration opportunities.
         - Integrated AI-powered retrieval techniques to streamline query-based document access, reducing information retrieval time for users in business and research settings.
         - Optimized data processing pipelines using containerization (**<span style='color:#FF6347; font-weight:bold;'>Docker, Kubernetes</span>**), ensuring scalability and efficient deployment of AI-driven solutions.
-    
+
         <br><br>
-    
+
         **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Legislative Services Agency</span>** | **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Business Analyst Intern</span>** (<span style='color:#1E90FF; font-weight:bold;'>Dec 2023 – Mar 2024</span>)
         - Designed and managed SQL-based ETL workflows, achieving **<span style='color:#FF6347; font-weight:bold;'>98% data accuracy</span>** in validating and preprocessing Indiana General Assembly datasets.
         - Developed and optimized <span style='color:#FF6347; font-weight:bold;'>SQL queries</span> to enhance data extraction, transformation, and loading (ETL) efficiency for legislative reports and bill tracking.
@@ -216,4 +216,3 @@ with home_tab:
         - Automated data validation and reporting pipelines, significantly reducing manual data processing workloads and improving reporting efficiency.
         - Provided technical support and troubleshooting for legislative data systems, ensuring seamless integration of business intelligence tools for data-driven policy analysis.
         """, unsafe_allow_html=True)
-
