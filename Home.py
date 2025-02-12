@@ -117,7 +117,7 @@ st.markdown("""
 
 # --- PERSONAL INFORMATION (Header Section) ---
 name = "Avinash Pandey"
-description1 = ("""➡️ I have a strong curiosity for leveraging AI, Machine Learning, and Data Engineering to develop scalable data pipelines, optimize AI-driven workflows, and extract meaningful insights from unstructured data.
+description1 = ("""I have a strong curiosity for leveraging AI, Machine Learning, and Data Engineering to develop scalable data pipelines, optimize AI-driven workflows, and extract meaningful insights from unstructured data.
 
 Most recently, as a Machine Learning Engineering Intern at Aider Ventures (Nienna Lab), I developed an automated ETL pipeline that processed 10,000+ research papers, leveraging FAISS embeddings, ChromaDB, and LangChain to improve retrieval accuracy and metadata extraction by 20%. I also built interactive data visualization frameworks to analyze trends in AI research, providing structured insights for non-technical stakeholders.
 
@@ -149,7 +149,7 @@ profile_pic = Image.open("images/photo.jpg")
 col_left, col_right = st.columns([1, 2])
 with col_left:
     st.title(name)
-    st.image(profile_pic)
+    st.image(profile_pic, width=300)
 with col_right:
     st.write(description1)
 
