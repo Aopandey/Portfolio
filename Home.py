@@ -248,6 +248,7 @@ with content_col:
     # WORK EXPERIENCE SECTION
     st.write("---")
     st.subheader("Professional Experience")
+    st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
     <span style="font-size:1.1em;">
 
