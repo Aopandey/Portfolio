@@ -31,8 +31,8 @@ def show_about():
     st.markdown("<br>", unsafe_allow_html=True)
 
     # Hobbies section
-    st.header("Hobbies and Interests")
-    # st.markdown("<br>", unsafe_allow_html=True)
+    st.title("Hobbies and Interests")
+    st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
     <span style='font-size:1.1em;'>
     Beyond my work in AI and data science, I have a deep love for sports, creativity, and adventure. You’ll often find me:
