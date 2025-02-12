@@ -101,15 +101,15 @@ else:
         left_space, content_col, right_space = st.columns([1, 3, 1])  # Matching width for alignment
 
         with content_col:
-            inner_col1, inner_col2 = st.columns([1, 2])  # Photo on left, description on right
+            inner_col1, inner_col2 = st.columns([1, 1])  # Photo on left, description on right
 
             with inner_col1:
-                st.markdown("<br><br><br><br>", unsafe_allow_html=True)
+                st.markdown(f"<h1 style='margin-bottom: 10px;'>{name}</h1>", unsafe_allow_html=True)
+                # st.markdown("<br><br><br><br>", unsafe_allow_html=True)
                 st.image(profile_pic, width=500)  # Adjusted width to fit properly
 
             with inner_col2:
-                st.markdown(f"<h1 style='margin-left: 78px;margin-bottom: 10px;'>{name}</h1>", unsafe_allow_html=True)
-                st.markdown("<br>", unsafe_allow_html=True)
+                st.markdown("<br><br><br>", unsafe_allow_html=True)
                 st.markdown(description1, unsafe_allow_html=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
@@ -187,7 +187,7 @@ else:
 
         # WORK EXPERIENCE SECTION
         st.write("---")
-        st.subheader("Work Experience")
+        st.subheader("Professional Experience")
         st.markdown("<br>", unsafe_allow_html=True)
 
         st.markdown("""
