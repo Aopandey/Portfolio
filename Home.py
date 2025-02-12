@@ -128,6 +128,11 @@ with open("styles/main.css") as f:
 
 with open("images/Avinash Pandey Resume DS.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
+with open("images/Avinash Pandey Resume DE.pdf", "rb") as pdf_file:
+    PDFbyte1 = pdf_file.read()
+
+with open("images/Avinash Pandey Resume SWE.pdf", "rb") as pdf_file:
+    PDFbyte2 = pdf_file.read()
 
 profile_pic = Image.open("images/photo.jpg")
 
@@ -145,8 +150,20 @@ with col2:
 st.write("---")
 st.subheader("Resume")
 st.download_button(
-    label="📁 Download Resume",
+    label="📁 Data Science and Analysis Resume",
     data=PDFbyte,
+    file_name="Avinash Pandey Resume.pdf",
+    mime="application/octet-stream",
+)
+st.download_button(
+    label="📁 Download Resume",
+    data=PDFbyte1,
+    file_name="Avinash Pandey Resume.pdf",
+    mime="application/octet-stream",
+)
+st.download_button(
+    label="📁 Download Resume",
+    data=PDFbyte2,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
 )
