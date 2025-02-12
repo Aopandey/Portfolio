@@ -116,7 +116,7 @@ st.markdown("""
     }
     /* This container will constrain content to a maximum width */
     .narrow-container {
-        max-width: 800px;
+        max-width: 400px;
         margin-left: auto;
         margin-right: auto;
         padding: 1rem;
