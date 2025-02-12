@@ -251,7 +251,7 @@ with content_col:
     st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("""
-    **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Aider Ventures (Nienna Lab)</span>** | **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Machine Learning Engineering Intern</span>** (<span style='color:#1E90FF; font-weight:bold;'>July 2024 – Nov 2024</span>)
+    **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Aider Ventures</span>** | **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Machine Learning Engineering Intern</span>** (<span style='color:#1E90FF; font-weight:bold;'>July 2024 – Nov 2024</span>)
     - Developed and optimized an automated ETL pipeline that processed **<span style='color:#FF6347; font-weight:bold;'>10,000+ research papers</span>** from **<span style='color:#1E90FF; font-weight:bold;'>ICML 2024</span>**, leveraging **<span style='color:#FF6347; font-weight:bold;'>FAISS embeddings, ChromaDB, and LangChain</span>** to convert unstructured research text into structured data, improving retrieval accuracy and metadata extraction by **<span style='color:#FF6347; font-weight:bold;'>20%</span>**.
     - Engineered scalable classification models using the **<span style='color:#FF6347; font-weight:bold;'>Gemini API</span>**, improving content organization and research trend analysis by **<span style='color:#FF6347; font-weight:bold;'>40%</span>**.
     - Implemented metadata filtering algorithms in **<span style='color:#FF6347; font-weight:bold;'>LangChain</span>**, enhancing the precision of extracted insights by **<span style='color:#FF6347; font-weight:bold;'>20%</span>**.
