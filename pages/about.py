@@ -1,19 +1,26 @@
 import streamlit as st
 from PIL import Image, ImageOps
+from streamlit_autorefresh import st_autorefresh
 
 
 def show_about():
-    # Title
+    # --- About Me Section ---
     st.title("About Me")
     st.markdown("<br>", unsafe_allow_html=True)
-
     st.markdown("""
     <span style='font-size:1.1em;'>
-    I wear multiple hats—part engineer, part problem solver. My journey from <span style='color:#1E90FF; font-weight:bold;'>India to Indiana</span> has been one of growth, resilience, and discovery, leading me to specialize in <span style='color:#FF6347; font-weight:bold;'>AI-driven data pipelines</span>, <span style='color:#FF6347; font-weight:bold;'>machine learning</span>, and <span style='color:#FF6347; font-weight:bold;'>data engineering</span>. On the technical front, I build scalable ETL pipelines, optimize AI retrieval models, and design interactive data visualizations. The data-driven side of me focuses on structuring unstructured data, improving model accuracy, and bridging the gap between AI and business strategy.
-    <br>
-    My academic journey reflects my curiosity and adaptability. I earned a Bachelor’s degree in <span style='color:#1E90FF; font-weight:bold;'>Computer Science</span> with a <span style='color:#1E90FF; font-weight:bold;'>Minor in Mathematics</span> from <span style='color:#1E90FF; font-weight:bold;'>Purdue University</span>, an achievement that once felt like a distant dream. Originally starting in Computer Engineering, I soon realized that Computer Science was my true passion, leading me to pivot and explore AI, data engineering, and large-scale data processing.
+    I wear multiple hats—part engineer, part problem solver. My journey from 
+    <span style='color:#1E90FF; font-weight:bold;'>India to Indiana</span> has been one of growth, resilience, and discovery, leading me to specialize in 
+    <span style='color:#FF6347; font-weight:bold;'>AI-driven data pipelines</span>, 
+    <span style='color:#FF6347; font-weight:bold;'>machine learning</span>, and 
+    <span style='color:#FF6347; font-weight:bold;'>data engineering</span>. On the technical front, I build scalable ETL pipelines, optimize AI retrieval models, and design interactive data visualizations. The data-driven side of me focuses on structuring unstructured data, improving model accuracy, and bridging the gap between AI and business strategy.
     <br><br>
-    <span style='color:#1E90FF; font-size:1em; font-weight:bold;'>Leadership & Projects</span>
+    My academic journey reflects my curiosity and adaptability. I earned a Bachelor’s degree in 
+    <span style='color:#1E90FF; font-weight:bold;'>Computer Science</span> with a 
+    <span style='color:#1E90FF; font-weight:bold;'>Minor in Mathematics</span> from 
+    <span style='color:#1E90FF; font-weight:bold;'>Purdue University</span>, an achievement that once felt like a distant dream. Originally starting in Computer Engineering, I soon realized that Computer Science was my true passion, leading me to pivot and explore AI, data engineering, and large-scale data processing.
+    <br><br>
+    <span style='color:#1E90FF; font-size:1em; font-weight:bold;'>Leadership &amp; Projects</span>
     <br><br>
     - Co-founded the Computer Science Club at Purdue Indianapolis, increasing engagement by <span style='color:#FF6347; font-weight:bold;'>100%</span> and organizing hackathons with <span style='color:#FF6347; font-weight:bold;'>200+ participants</span>.
     <br>
@@ -28,10 +35,11 @@ def show_about():
     I thrive at the intersection of AI, data, and real-world impact, always looking for ways to turn complex problems into practical, scalable solutions.
     </span>
     """, unsafe_allow_html=True)
-    st.markdown("<br>", unsafe_allow_html=True)
 
-    # Hobbies section
-    st.title("Hobbies and Interests")
+    st.markdown("<br><br>", unsafe_allow_html=True)
+
+    # --- Hobbies & Interests Section ---
+    st.title("Hobbies & Interests")
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
     <span style='font-size:1.1em;'>
@@ -55,13 +63,9 @@ def show_about():
     </span>
     """, unsafe_allow_html=True)
 
-
     st.markdown("<br><br><br>", unsafe_allow_html=True)
 
-    # Photo Slider Section
-    # st.header("Personal/Interests Photos")
-    # st.markdown("<br>", unsafe_allow_html=True)
-
+    # --- Photo Slideshow Section ---
     # List of image file paths (ensure these files exist in the specified location)
     image_paths = [
         "images/hobby1.JPG",
@@ -71,33 +75,30 @@ def show_about():
         "images/hobby5.JPG",
         "images/hobby6.JPG",
         "images/hobby7.jpg"
-
     ]
 
+    # Specify which images should remain in their original (landscape) orientation.
+    # Adjust the file names in this list to match those that are naturally landscape.
+    landscape_exceptions = ["images/hobby2.JPG", "images/hobby5.JPG"]
 
-    # Load images using PIL and force portrait orientation:
+    # Load images using PIL
     images = []
     for path in image_paths:
         img = Image.open(path)
-        # Apply exif_transpose to fix orientation if needed
+        # Correct orientation based on EXIF data (if available)
         img = ImageOps.exif_transpose(img)
-        # If image is landscape, rotate it to portrait
-        if img.width > img.height:
+        # For images not in our exception list, if they are landscape (wider than tall), rotate them to portrait.
+        if path not in landscape_exceptions and img.width > img.height:
             img = img.rotate(90, expand=True)
         images.append(img)
 
-    # Create a container that centers the image and slider together
+    # Automatically refresh the page every 5 seconds and cycle through images.
+    # This returns a counter that increments every 5000 milliseconds.
+    count = st_autorefresh(interval=5000, limit=100, key="auto_refresh")
+    selected_index = count % len(images)
+
+    # Use a container with columns to center the image.
     with st.container():
-        # Use columns to limit the slider width.
-        # Here, we create three columns with ratios that force the slider to be in a narrow central column.
         col_left, col_center, col_right = st.columns([2, 1, 2])
-
-        # Display the image in the center column.
-        image_placeholder = col_center.empty()
-        image_placeholder.image(images[0], caption="Photo 1", width=500)
-
-        # Place the slider inside the center column too.
-        selected_index = col_center.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
-
-        # Update the image according to the slider selection.
-        image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=500)
+        with col_center:
+            st.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=500)
