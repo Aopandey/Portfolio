@@ -149,24 +149,24 @@ with col2:
 # Resumes
 st.write("---")
 st.subheader("Resume")
-st.columns(st.download_button(
+st.download_button(
     label="📁 Data Science and Analysis Resume",
     data=PDFbyte,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
-),
+)
 st.download_button(
     label="📁 Data Engineering and Pipeline Resume",
     data=PDFbyte1,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
-),
+)
 st.download_button(
     label="📁 Software Engineering Resume",
     data=PDFbyte2,
     file_name="Avinash Pandey Resume.pdf",
     mime="application/octet-stream",
-))
+)
 
 
 # Social Media Links
@@ -180,8 +180,11 @@ for index, (platform, link) in enumerate(social_media.items()):
 st.write("---")
 st.subheader("Technical Skills")
 st.write("""
-- **Programming and Data management:** Python, SQL, R, Java, C++, JavaScript, SQL Server, ETL Pipelines
-- **Frameworks and Tools:** TensorFlow, PyTorch, Scikit-learn, Django, Pandas, NumPy, Tableau, Power BI, Git, GitHub
+- **Programming Languages & Development:** Python, Java, C++, JavaScript, TypeScript, R, Flask, FastAPI, Django, Node.js, ReactJS
+- **Data Science & AI Development:**
+- *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib
+- *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)
+- *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
 - **Cloud and Big Data:** AWS (S3, Lambda, EC2), Azure Data Lake, Hadoop, Spark, Docker, Dagster
 - **Machine Learning and AI:** OpenAI API, Gemini API, LangChain, Hugging Face, FAISS, ChromaDB, ZenML, Haystack
 """)
