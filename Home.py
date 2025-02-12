@@ -71,7 +71,7 @@ col_left, col_right = st.columns([1, 2])
 with col_left:
     st.markdown("<div style='margin-left: 400px;'><h1 style='text-align: center;'>{}</h1></div>".format(name),
                 unsafe_allow_html=True)
-    spacer, image_col = st.columns([1, 7])
+    spacer, image_col = st.columns([1, 3])
     with image_col:
         st.image(profile_pic, width=500)
 with col_right:
