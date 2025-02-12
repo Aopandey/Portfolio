@@ -8,7 +8,7 @@ import streamlit as st
 from PIL import Image
 import importlib.util
 
-spec = importlib.util.spec_from_file_location("projects", "projects.py")
+spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
 projects = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(projects)
 
