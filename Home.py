@@ -75,7 +75,7 @@ with col_left:
     with image_col:
         st.image(profile_pic, width=500)
 with col_right:
-    st.markdown("<div style='margin-left: 100px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1), unsafe_allow_html=True)
+    st.markdown("<div style='margin-left: 200px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1), unsafe_allow_html=True)
 
 st.markdown("<br><br><br>", unsafe_allow_html=True)
 
