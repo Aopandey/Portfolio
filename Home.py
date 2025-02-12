@@ -261,8 +261,8 @@ with content_col:
 
     **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Legislative Services Agency</span>** | **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Business Analyst Intern</span>** (<span style='color:#1E90FF; font-weight:bold;'>Dec 2023 – Mar 2024</span>)
     - Designed and managed SQL-based ETL workflows, achieving **<span style='color:#FF6347; font-weight:bold;'>98% data accuracy</span>** in validating and preprocessing Indiana General Assembly datasets.
-    - Developed and optimized SQL queries to enhance data extraction, transformation, and loading (ETL) efficiency for legislative reports and bill tracking.
-    - Built Power BI and Tableau dashboards, enabling real-time business intelligence reporting and improving legislative data analysis for decision-makers.
+    - Developed and optimized **<span style='color:#FF6347; font-weight:bold;'>SQL queries</span>** to enhance data extraction, transformation, and loading (ETL) efficiency for legislative reports and bill tracking.
+    - Built **<span style='color:#FF6347; font-weight:bold;'>Power BI and Tableau dashboards</span>**, enabling real-time business intelligence reporting and improving legislative data analysis for decision-makers.
     - Automated data validation and reporting pipelines, significantly reducing manual data processing workloads and improving reporting efficiency.
     - Provided technical support and troubleshooting for legislative data systems, ensuring seamless integration of business intelligence tools for data-driven policy analysis.
     """, unsafe_allow_html=True)
