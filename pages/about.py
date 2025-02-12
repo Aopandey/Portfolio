@@ -67,7 +67,7 @@ def show_about():
         "images/hobby1.JPG",
         "images/hobby2.JPG",
         "images/hobby3.JPG",
-        "images/hobby4.JPG",
+        "images/hobby4.jpg",
         "images/hobby5.JPG",
         "images/hobby6.JPG",
         "images/hobby7.JPG"
