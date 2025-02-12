@@ -97,16 +97,16 @@
 import streamlit as st
 from PIL import Image
 
-# --- PAGE CONFIGURATION ---
+# --- PAGE CONFIGURATION: Use wide layout for the header ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
-# --- LOAD THE PROVIDED CSS ---
+# --- LOAD GLOBAL CSS (Your Provided Styles) ---
 with open("styles/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # --- ADDITIONAL CUSTOM CSS ---
 # 1. Smaller download buttons.
-# 2. CSS for a narrow container to wrap content after the header.
+# 2. A narrow container for all content AFTER the header.
 st.markdown("""
     <style>
     /* Smaller download buttons */
@@ -114,7 +114,7 @@ st.markdown("""
         padding: 0.25em 0.5em;
         font-size: 0.8em;
     }
-    /* Narrow container for all content except the header */
+    /* This container will constrain content to a maximum width */
     .narrow-container {
         max-width: 800px;
         margin-left: auto;
@@ -124,7 +124,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- PERSONAL INFORMATION ---
+# --- PERSONAL INFORMATION (Header Section) ---
 name = "Avinash Pandey"
 description1 = ("""➡️ I have a strong curiosity for leveraging AI, Machine Learning, and Data Engineering to develop scalable data pipelines, optimize AI-driven workflows, and extract meaningful insights from unstructured data.
 
@@ -151,8 +151,10 @@ with open("images/Avinash Pandey Resume SWE.pdf", "rb") as pdf_file:
 
 profile_pic = Image.open("images/photo.jpg")
 
-# --- HEADER SECTION (WIDE) ---
-# Here the header (name, photo, description) is rendered using two columns spanning the full width.
+# --- HEADER SECTION (FULL WIDTH) ---
+# Create two columns for the header.
+# Left column: Name and photo (stacked)
+# Right column: Description (aligned at the top)
 col_left, col_right = st.columns([1, 2])
 with col_left:
     st.title(name)
@@ -160,80 +162,80 @@ with col_left:
 with col_right:
     st.write(description1)
 
-# --- REST OF THE CONTENT (IN A NARROW CONTAINER) ---
-# All sections after the header are wrapped in a <div> with the class "narrow-container" to limit their width.
-with st.container():
-    st.markdown('<div class="narrow-container">', unsafe_allow_html=True)
+# --- BEGIN NARROW CONTAINER FOR THE REST OF THE CONTENT ---
+st.markdown('<div class="narrow-container">', unsafe_allow_html=True)
 
-    # RESUME SECTION
-    st.write("---")
-    st.subheader("Resume")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.download_button(
-            label="📁 Data Science and Analysis Resume",
-            data=PDFbyte,
-            file_name="Avinash_Pandey_Resume_DS.pdf",
-            mime="application/octet-stream"
-        )
-    with col2:
-        st.download_button(
-            label="📁 Data Engineering and Pipeline Resume",
-            data=PDFbyte1,
-            file_name="Avinash_Pandey_Resume_DE.pdf",
-            mime="application/octet-stream"
-        )
-    with col3:
-        st.download_button(
-            label="📁 Software Engineering Resume",
-            data=PDFbyte2,
-            file_name="Avinash_Pandey_Resume_SWE.pdf",
-            mime="application/octet-stream"
-        )
+# RESUME SECTION
+st.write("---")
+st.subheader("Resume")
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.download_button(
+        label="📁 Data Science and Analysis Resume",
+        data=PDFbyte,
+        file_name="Avinash_Pandey_Resume_DS.pdf",
+        mime="application/octet-stream"
+    )
+with col2:
+    st.download_button(
+        label="📁 Data Engineering and Pipeline Resume",
+        data=PDFbyte1,
+        file_name="Avinash_Pandey_Resume_DE.pdf",
+        mime="application/octet-stream"
+    )
+with col3:
+    st.download_button(
+        label="📁 Software Engineering Resume",
+        data=PDFbyte2,
+        file_name="Avinash_Pandey_Resume_SWE.pdf",
+        mime="application/octet-stream"
+    )
 
-    # PROFESSIONAL PLATFORMS SECTION
-    st.write("---")
-    st.subheader("Professional Platforms")
-    platform_cols = st.columns(len(social_media))
-    for idx, (platform, link) in enumerate(social_media.items()):
-        platform_cols[idx].write(f"💻 [{platform}]({link})")
+# PROFESSIONAL PLATFORMS SECTION
+st.write("---")
+st.subheader("Professional Platforms")
+platform_cols = st.columns(len(social_media))
+for idx, (platform, link) in enumerate(social_media.items()):
+    platform_cols[idx].write(f"💻 [{platform}]({link})")
 
-    # TECHNICAL SKILLS SECTION
-    st.write("---")
-    st.subheader("Technical Skills")
-    st.write("""
-    - **Programming Languages & Development:** Python, Java, C++, JavaScript, TypeScript, R, Flask, FastAPI, Django, Node.js, ReactJS
-    - **Data Science & AI Development:**
-      - *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib
-      - *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)
-      - *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
-    - **Cloud and Big Data:** AWS (S3, Lambda, EC2), Azure Data Lake, Hadoop, Spark, Docker, Dagster
-    - **Machine Learning and AI:** OpenAI API, Gemini API, LangChain, Hugging Face, FAISS, ChromaDB, ZenML, Haystack
-    """)
+# TECHNICAL SKILLS SECTION
+st.write("---")
+st.subheader("Technical Skills")
+st.write("""
+- **Programming Languages & Development:** Python, Java, C++, JavaScript, TypeScript, R, Flask, FastAPI, Django, Node.js, ReactJS
+- **Data Science & AI Development:**
+  - *Machine Learning:* Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib
+  - *Deep Learning:* Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)
+  - *AI & Data Science Applications:* Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation
+- **Cloud and Big Data:** AWS (S3, Lambda, EC2), Azure Data Lake, Hadoop, Spark, Docker, Dagster
+- **Machine Learning and AI:** OpenAI API, Gemini API, LangChain, Hugging Face, FAISS, ChromaDB, ZenML, Haystack
+""")
 
-    # WORK EXPERIENCE SECTION
-    st.write("---")
-    st.subheader("Work Experience")
-    st.write("""
-    **Machine Learning Engineering Intern**  
-    *Aider Ventures, Indianapolis, IN*  
-    *July 2024 – Present*
+# WORK EXPERIENCE SECTION
+st.write("---")
+st.subheader("Work Experience")
+st.write("""
+**Machine Learning Engineering Intern**  
+*Aider Ventures, Indianapolis, IN*  
+*July 2024 – Present*
 
-    - Developed automated data pipelines using FAISS embeddings and ChromaDB to summarize over 2,600 research papers from ICML 2024, optimizing data handling and ensuring accurate information extraction from scraped source icml.cc.
-    - Engineered scalable pipelines leveraging Gemini API to process and classify over 10,000 research papers, improving the categorization process of datasets and increasing system efficiency by 40% through data processing techniques.
-    - Implemented metadata filtering algorithms in LangChain, improving precision of summarized research outputs by 20%.
-    - Constructed an interactive dashboard for visualizing and analyzing key insights like the number of papers by university and top research areas, enabling non-technical professionals to gain insightful trends across over 10,000 papers.
+- Developed automated data pipelines using FAISS embeddings and ChromaDB to summarize over 2,600 research papers from ICML 2024, optimizing data handling and ensuring accurate information extraction from scraped source icml.cc.
+- Engineered scalable pipelines leveraging Gemini API to process and classify over 10,000 research papers, improving the categorization process of datasets and increasing system efficiency by 40% through data processing techniques.
+- Implemented metadata filtering algorithms in LangChain, improving precision of summarized research outputs by 20%.
+- Constructed an interactive dashboard for visualizing and analyzing key insights like the number of papers by university and top research areas, enabling non-technical professionals to gain insightful trends across over 10,000 papers.
 
-    **Business Analyst Intern – Office of Technology Services**  
-    *Legislative Services Agency, Indianapolis, IN*  
-    *December 2023 – March 2024*
+**Business Analyst Intern – Office of Technology Services**  
+*Legislative Services Agency, Indianapolis, IN*  
+*December 2023 – March 2024*
 
-    - Collaborated with Software Developers and Business Analysts to support and troubleshoot internal software using tools like Tableau, SQL Server, and Power BI, achieving a 95% resolution rate.
-    - Executed data verification processes through ETL pipelines, ensuring 98% accuracy for Indiana General Assembly datasets.
-    - Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff, optimizing business processes through the development of tailored applications and problem resolution tools.
-    """)
+- Collaborated with Software Developers and Business Analysts to support and troubleshoot internal software using tools like Tableau, SQL Server, and Power BI, achieving a 95% resolution rate.
+- Executed data verification processes through ETL pipelines, ensuring 98% accuracy for Indiana General Assembly datasets.
+- Facilitated strategic interactions and technical support with Indiana lawmakers and Legislative Services Agency staff, optimizing business processes through the development of tailored applications and problem resolution tools.
+""")
 
-    st.markdown('</div>', unsafe_allow_html=True)
+# End the narrow container.
+st.markdown('</div>', unsafe_allow_html=True)
+
 
 # import streamlit as st
 #
