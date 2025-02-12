@@ -148,10 +148,10 @@ profile_pic = Image.open("images/photo.jpg")
 # Right column: Description (aligned at the top)
 col_left, col_right = st.columns([1, 2])
 with col_left:
-    st.markdown("<h1 style='text-align: center;'>"+name+"</h1>", unsafe_allow_html=True)
-    st.markdown("<div style='padding-left: 500px;'>", unsafe_allow_html=True)
-    st.image(profile_pic, width=400)
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>{}</h1>".format(name), unsafe_allow_html=True)
+    spacer, image_col = st.columns([1, 4])
+    with image_col:
+        st.image(profile_pic, width=300)
 with col_right:
     st.markdown("<div style='margin-top: 50px;'>"+description1+"</div>", unsafe_allow_html=True)
 
