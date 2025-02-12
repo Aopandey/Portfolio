@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image, ImageOps
-from streamlit_autorefresh import st_autorefresh
-
+# Removed the auto-refresh import since it's not used:
+# from streamlit_autorefresh import st_autorefresh
 
 def show_about():
     # --- About Me Section ---
@@ -77,29 +77,26 @@ def show_about():
         "images/hobby7.jpg"
     ]
 
-
     # Specify which images should remain in their original (landscape) orientation.
-    # Adjust the file names in this list to match those that are naturally landscape.
     landscape_exceptions = ["images/hobby2.JPG", "images/hobby5.JPG"]
 
     # Load images using PIL
     images = []
     for path in image_paths:
         img = Image.open(path)
-        # Correct orientation based on EXIF data (if available)
         img = ImageOps.exif_transpose(img)
-        # For images not in our exception list, if they are landscape (wider than tall), rotate them to portrait.
         if path not in landscape_exceptions and img.width > img.height:
             img = img.rotate(90, expand=True)
         images.append(img)
 
-    # # Automatically refresh the page every 5 seconds and cycle through images.
-    # # This returns a counter that increments every 5000 milliseconds.
-    # count = st_autorefresh(interval=5000, limit=100, key="auto_refresh")
-    # selected_index = count % len(images)
-    selected_index = st.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
-
     # Use a container with columns to center the image.
+    with st.container():
+        col_left, col_center, col_right = st.columns([2, 1, 2])
+        with col_center:
+            st.image(images[0], caption="Photo 1", width=500)
+
+    # Use a slider (manual selection) or auto-refresh if needed.
+    selected_index = st.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
     with st.container():
         col_left, col_center, col_right = st.columns([2, 1, 2])
         with col_center:
