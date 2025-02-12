@@ -5,8 +5,10 @@
 # from PIL import Image
 
 import streamlit as st
-from PIL import Image
+from streamlit_option_menu import option_menu
 import importlib.util
+
+import Home
 
 # Dynamically import pages
 spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
@@ -20,19 +22,17 @@ spec.loader.exec_module(about)
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
-# --- CUSTOM CSS to move navigation to the top and disable the sidebar toggle ---
+# --- CUSTOM CSS to remove any default padding/margin (optional) ---
 st.markdown(
     """
     <style>
-    /* Remove any top padding from the main container */
+    /* Remove any extra top spacing from the main container */
     [data-testid="stAppViewContainer"] {
         padding-top: 0 !important;
         margin-top: 0 !important;
     }
-    /* Hide the sidebar toggle button by trying several selectors */
-    button[aria-label="Toggle sidebar"],
+    /* Hide any default sidebar toggle button */
     button[title="Toggle sidebar"],
-    button[data-testid="stSidebarCollapse"],
     [data-testid="collapsedControl"] {
         display: none !important;
     }
@@ -41,21 +41,43 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# --- TOP NAVIGATION using streamlit_option_menu (horizontal) ---
+selected = option_menu(
+    None,  # no title since it's placed at the very top
+    ["Home", "Projects", "About Me"],
+    icons=["house", "folder", "person"],
+    menu_icon="cast",
+    default_index=0,
+    orientation="horizontal",
+    styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "orange", "font-size": "20px"},
+        "nav-link": {
+            "font-size": "18px",
+            "text-align": "center",
+            "margin": "0px",
+            "--hover-color": "#eee"
+        },
+        "nav-link-selected": {"background-color": "#0d6efd"},
+    }
+)
 
-# --- CREATE TABS ---
-home_tab, projects_tab, about_tab = st.tabs(["Home", "Projects", "About Me"])
-
-with projects_tab:
+# --- Render content based on selection ---
+if selected == "Home":
+    # Your Home content goes here.
+    # st.write("Welcome to my Home page!")
+    # ... (include your Home content as desired)
+    Home.show_home()
+elif selected == "Projects":
     projects.show_projects()
-
-with about_tab:
+elif selected == "About Me":
     about.show_about()
 
 # --- LOAD GLOBAL CSS (Your Provided Styles) ---
 with open("styles/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# --- ADDITIONAL CUSTOM CSS ---
+# --- ADDITIONAL CUSTOM CSS (if needed) ---
 st.markdown(
     """
     <style>
@@ -69,7 +91,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-with home_tab:
+def show_home():
     # --- PERSONAL INFORMATION (Header Section) ---
     name = "Avinash Pandey"
     description1 = ("""\
