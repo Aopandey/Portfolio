@@ -77,7 +77,7 @@ with col_left:
 with col_right:
     st.markdown("<div style='margin-left: 200px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1), unsafe_allow_html=True)
 
-st.markdown("<br><br><br>", unsafe_allow_html=True)
+st.markdown("<br><br>", unsafe_allow_html=True)
 
 # --- NARROW CONTENT AREA (Using Columns) ---
 # Create three columns: left spacer, center content, and right spacer.
