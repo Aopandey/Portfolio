@@ -59,8 +59,8 @@ def show_about():
     st.markdown("<br><br><br>", unsafe_allow_html=True)
 
     # Photo Slider Section
-    st.header("Personal/Interests Photos")
-    st.markdown("<br>", unsafe_allow_html=True)
+    # st.header("Personal/Interests Photos")
+    # st.markdown("<br>", unsafe_allow_html=True)
 
     # List of image file paths (ensure these files exist in the specified location)
     image_paths = [
