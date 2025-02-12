@@ -62,7 +62,7 @@ elif selected == "About Me":
 
 else:
     # --- PERSONAL INFORMATION (Header Section) ---
-    name = "Avinash Pandeyu"
+    name = "Avinash Pandey"
     description1 = ("""\
     <span style="font-size:1.2em;">
     I am passionate about leveraging <span style="color:#1E90FF; font-weight:bold;">AI, Machine Learning, and Data Engineering</span> to develop scalable data pipelines, optimize AI-driven workflows, and extract <span style="color:#FF6347; font-weight:bold;">actionable insights</span> from complex datasets.
