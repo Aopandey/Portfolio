@@ -94,10 +94,10 @@ def show_about():
 
         # Display the image in the center column.
         image_placeholder = col_center.empty()
-        image_placeholder.image(images[0], caption="Photo 1", width=500)
+        image_placeholder.image(images[0], caption="Photo 1", width=600)
 
         # Place the slider inside the center column too.
-        selected_index = col_center.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
+        selected_index = col_center.slider("Select a photo", 1, len(images) - 1, 0, key="photo_slider")
 
         # Update the image according to the slider selection.
-        image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=500)
+        image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=600)
