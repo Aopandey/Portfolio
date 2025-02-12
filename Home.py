@@ -176,6 +176,7 @@ with content_col:
     # RESUME SECTION
     st.write("---")
     st.subheader("Resume")
+    st.markdown("<br>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     with col1:
         st.download_button(
