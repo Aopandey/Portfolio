@@ -74,7 +74,7 @@ def show_about():
 
     ]
 
-    landscape_exceptions = ["images/hobby2.JPG", "images/hobby5.JPG"]
+    landscape_exceptions = ["images/hobby3.JPG", "images/hobby7.jpg"]
     # Load images using PIL and force portrait orientation:
     images = []
     for path in image_paths:
