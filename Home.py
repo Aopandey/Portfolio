@@ -153,7 +153,7 @@ with col_left:
     with image_col:
         st.image(profile_pic, width=400)
 with col_right:
-    st.markdown("<div style='margin-left: -60px; margin-right: -60px; margin-top: 70px;'>{}</div>".format(description1), unsafe_allow_html=True)
+    st.markdown("<div style='margin-left: -60px; margin-right: -150px; margin-top: 70px;'>{}</div>".format(description1), unsafe_allow_html=True)
 
 # --- NARROW CONTENT AREA (Using Columns) ---
 # Create three columns: left spacer, center content, and right spacer.
