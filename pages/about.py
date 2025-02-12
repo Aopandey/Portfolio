@@ -70,7 +70,7 @@ def show_about():
         "images/hobby4.jpg",
         "images/hobby5.JPG",
         "images/hobby6.JPG",
-        "images/hobby7.JPG"
+        "images/hobby7.jpg"
 
     ]
 
