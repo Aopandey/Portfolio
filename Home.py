@@ -255,14 +255,14 @@ with content_col:
     - Implemented metadata filtering algorithms in **<span style='color:#FF6347; font-weight:bold;'>LangChain</span>**, refining data enrichment processes and enhancing the precision of extracted insights by **<span style='color:#FF6347; font-weight:bold;'>20%</span>** to improve downstream AI applications.
     - Built an interactive data visualization framework to analyze AI research trends, presenting insights on top universities, research areas, and general topic distributions to help non-technical stakeholders identify startup and collaboration opportunities.
     - Integrated AI-powered retrieval techniques to streamline query-based document access, reducing information retrieval time for users in business and research settings.
-    - Optimized data processing pipelines using containerization (**<span style='color:#FF6347; font-weight:bold;'>Docker, Kubernetes</span>) ensuring scalability and efficient deployment of AI-driven solutions**.
+    - Optimized data processing pipelines using containerization (**<span style='color:#FF6347; font-weight:bold;'>Docker, Kubernetes</span>**).
 
     <br><br>
 
     **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Legislative Services Agency</span>** | **<span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Business Analyst Intern</span>** (<span style='color:#1E90FF; font-weight:bold;'>Dec 2023 – Mar 2024</span>)
     - Designed and managed SQL-based ETL workflows, achieving **<span style='color:#FF6347; font-weight:bold;'>98% data accuracy</span>** in validating and preprocessing Indiana General Assembly datasets.
-    - Developed and optimized SQL queries to enhance data extraction, transformation, and loading (ETL) efficiency for legislative reports and bill tracking.
-    - Built Power BI and Tableau dashboards, enabling real-time business intelligence reporting and improving legislative data analysis for decision-makers.
+    - Developed and optimized <span style='color:#FF6347; font-weight:bold;'>SQL queries</span> to enhance data extraction, transformation, and loading (ETL) efficiency for legislative reports and bill tracking.
+    - Built <span style='color:#FF6347; font-weight:bold;'>Power BI and Tableau dashboards</span>, enabling real-time business intelligence reporting and improving legislative data analysis for decision-makers.
     - Automated data validation and reporting pipelines, significantly reducing manual data processing workloads and improving reporting efficiency.
     - Provided technical support and troubleshooting for legislative data systems, ensuring seamless integration of business intelligence tools for data-driven policy analysis.
     """, unsafe_allow_html=True)
