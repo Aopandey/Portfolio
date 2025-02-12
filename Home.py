@@ -131,14 +131,14 @@ with open("images/Avinash Pandey Resume DS.pdf", "rb") as pdf_file:
 profile_pic = Image.open("images/photo.jpg")
 
 # Layout
-col1, col2 = st.columns([3, 1], gap="small")
-
-with col1:
-    st.title(name)
-    st.image(profile_pic)
-
-with col2:
-    st.write(description1)
+# col1, col2 = st.columns([3, 1], gap="small")
+#
+# with col1:
+#     st.title(name)
+#     st.image(profile_pic)
+#
+# with col2:
+#     st.write(description1)
 
 # Resumes
 st.write("---")
