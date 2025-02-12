@@ -12,7 +12,7 @@ spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
 projects = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(projects)
 
-spec = importlib.util.spec_from_file_location("about", "about.py")
+spec = importlib.util.spec_from_file_location("about", "pages/about.py")
 about = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(about)
 
