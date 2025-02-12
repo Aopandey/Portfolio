@@ -64,7 +64,7 @@ def show_about():
 
     # List of image file paths (ensure these files exist in the specified location)
     image_paths = [
-        "hobby1.jpg",
+        "images/hobby1.jpg",
         "images/hobby2.jpg",
         "images/hobby3.jpg",
         "images/hobby4.jpg",
