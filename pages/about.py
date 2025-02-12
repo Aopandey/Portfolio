@@ -13,7 +13,7 @@ def show_about():
     <br>
     My academic journey reflects my curiosity and adaptability. I earned a Bachelor’s degree in <span style='color:#1E90FF; font-weight:bold;'>Computer Science</span> with a <span style='color:#1E90FF; font-weight:bold;'>Minor in Mathematics</span> from <span style='color:#1E90FF; font-weight:bold;'>Purdue University</span>, an achievement that once felt like a distant dream. Originally starting in Computer Engineering, I soon realized that Computer Science was my true passion, leading me to pivot and explore AI, data engineering, and large-scale data processing.
     <br><br>
-    <span style='color:#1E90FF; font-size:1.5em; font-weight:bold;'>Leadership & Projects</span>
+    <span style='color:#1E90FF; font-size:0.8em; font-weight:bold;'>Leadership & Projects</span>
     <br><br>
     - Co-founded the Computer Science Club at Purdue Indianapolis, increasing engagement by <span style='color:#FF6347; font-weight:bold;'>100%</span> and organizing hackathons with <span style='color:#FF6347; font-weight:bold;'>200+ participants</span>.
     <br>
