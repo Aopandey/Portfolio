@@ -24,10 +24,13 @@ st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 st.markdown(
     """
     <style>
-    [data-testid="stSidebarNav"] {
-        display: none;
+    /* Remove extra top padding from the main app container */
+    [data-testid="stAppViewContainer"] {
+        padding-top: 0px;
     }
-    [data-testid="collapsedControl"] {
+
+    /* Hide the sidebar toggle button (which usually has the title "Toggle sidebar") */
+    button[title="Toggle sidebar"] {
         display: none !important;
     }
     </style>
