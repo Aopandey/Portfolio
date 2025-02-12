@@ -84,7 +84,7 @@ def show_about():
     with st.container():
         # Use columns to limit the slider width.
         # Here, we create three columns with ratios that force the slider to be in a narrow central column.
-        col_left, col_center, col_right = st.columns([2, 1, 2])
+        col_left, col_center, col_right = st.columns([3, 1, 2])
 
         # Display the image in the center column.
         image_placeholder = col_center.empty()
