@@ -216,27 +216,27 @@ with content_col:
     st.subheader("Technical Skills")
 
     st.markdown("""
-    **Programming Languages & Development**  
-    - **Languages:** Python, Java, C++, JavaScript, TypeScript, R  
-    - **Frameworks & Libraries:** Flask, FastAPI, Django, Node.js, ReactJS  
+    <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Programming Languages & Development</span>  
+    - <span style='color:#FF6347; font-weight:bold;'>Languages:</span> Python, Java, C++, JavaScript, TypeScript, R  
+    - <span style='color:#FF6347; font-weight:bold;'>Frameworks & Libraries:</span> Flask, FastAPI, Django, Node.js, ReactJS  
 
-    **Data Science & AI Development**  
-    - **Machine Learning:** Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib  
-    - **Deep Learning:** Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)  
-    - **Applications:** Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation  
+    <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Data Science & AI Development</span>  
+    - <span style='color:#FF6347; font-weight:bold;'>Machine Learning:</span> Scikit-learn, XGBoost, PyTorch, TensorFlow, Spark MLlib  
+    - <span style='color:#FF6347; font-weight:bold;'>Deep Learning:</span> Multi-Model Learning, Transfer Learning, Representation Learning, NLP (Text Classification, Sentiment Analysis, Named Entity Recognition, Topic Modeling)  
+    - <span style='color:#FF6347; font-weight:bold;'>Applications:</span> Predictive Analytics, Time Series Forecasting, Anomaly Detection, Customer Segmentation  
 
-    **Big Data, Cloud & ETL**  
-    - **Databases:** MySQL, MongoDB, DynamoDB, SQL Server  
-    - **Cloud & DevOps:** AWS (EC2, S3, Lambda), Docker, Kubernetes  
-    - **Data Engineering:** FAISS, ChromaDB, Data Warehousing, ETL Pipelines, Data Orchestration, Streaming Data Processing, Dagster  
+    <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Big Data, Cloud & ETL</span>  
+    - <span style='color:#FF6347; font-weight:bold;'>Databases:</span> MySQL, MongoDB, DynamoDB, SQL Server  
+    - <span style='color:#FF6347; font-weight:bold;'>Cloud & DevOps:</span> AWS (EC2, S3, Lambda), Docker, Kubernetes  
+    - <span style='color:#FF6347; font-weight:bold;'>Data Engineering:</span> FAISS, ChromaDB, Data Warehousing, ETL Pipelines, Data Orchestration, Streaming Data Processing, Dagster  
 
-    **Software Engineering & System Design**  
-    - **Development Tools:** RESTful APIs, GraphQL, Git, GitHub Actions, Jenkins, CI/CD Pipelines  
-    - **System Design:** Scalability, Microservices, Load Balancing, Caching Strategies, API Optimization, Performance Tuning  
+    <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Software Engineering & System Design</span>  
+    - <span style='color:#FF6347; font-weight:bold;'>Development Tools:</span> RESTful APIs, GraphQL, Git, GitHub Actions, Jenkins, CI/CD Pipelines  
+    - <span style='color:#FF6347; font-weight:bold;'>System Design:</span> Scalability, Microservices, Load Balancing, Caching Strategies, API Optimization, Performance Tuning  
 
-    **Data Visualization & Business Intelligence**  
-    - **Visualization Tools:** Tableau, Power BI, Matplotlib, Seaborn  
-    """)
+    <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Data Visualization & Business Intelligence</span>  
+    - <span style='color:#FF6347; font-weight:bold;'>Visualization Tools:</span> Tableau, Power BI, Matplotlib, Seaborn  
+    """, unsafe_allow_html=True)
 
     # WORK EXPERIENCE SECTION
     st.write("---")
