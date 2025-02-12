@@ -203,6 +203,7 @@ with content_col:
     # PROFESSIONAL PLATFORMS SECTION
     st.write("---")
     st.subheader("Professional Platforms")
+    st.markdown("<br>", unsafe_allow_html=True)
     platform_cols = st.columns(len(social_media))
     for idx, (platform, details) in enumerate(social_media.items()):
         # Build the markdown string with an image and a link.
@@ -217,6 +218,7 @@ with content_col:
     # TECHNICAL SKILLS SECTION
     st.write("---")
     st.subheader("Technical Skills")
+    st.markdown("<br>", unsafe_allow_html=True)
 
     st.markdown("""
     <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Programming Languages & Development</span>  
