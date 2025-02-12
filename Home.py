@@ -149,7 +149,7 @@ with col2:
 # Resumes
 st.write("---")
 st.subheader("Resume")
-st.download_button(
+st.columns.download_button(
     label="📁 Data Science and Analysis Resume",
     data=PDFbyte,
     file_name="Avinash Pandey Resume.pdf",
