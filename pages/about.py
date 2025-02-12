@@ -37,17 +37,17 @@ def show_about():
     <span style='font-size:1.1em;'>
     Beyond my work in AI and data science, I have a deep love for sports, creativity, and adventure. You’ll often find me:
     <br><br>
-    - <strong>⚽ Playing or watching soccer (football)</strong> — a lifelong passion, always cheering for <span style='color:#FF6347; font-weight:bold;'>Messi &amp; Barcelona</span>.
+    - <strong>⚽ Playing or watching soccer (football)</strong> — A lifelong passion, always cheering for <span style='color:#FF6347; font-weight:bold;'>Messi &amp; Barcelona</span>.
     <br>
-    - <strong>🏋️ Working out</strong> — fitness has been a huge part of my journey, helping me develop discipline and focus.
+    - <strong>🏋️ Working out</strong> — Fitness has been a huge part of my journey, helping me develop discipline and focus.
     <br>
-    - <strong>🎮 Diving into video games</strong> — from immersive story-driven RPGs to fast-paced FPS games.
+    - <strong>🎮 Diving into video games</strong> — From immersive story-mode RPGs to fast-paced FPS games.
     <br>
-    - <strong>⛰️ Hiking &amp; bouldering</strong> — always looking for new trails and climbing routes to challenge myself.
+    - <strong>⛰️ Hiking &amp; bouldering</strong> — Always looking for new trails and climbing routes to challenge myself.
     <br>
-    - <strong>🎬 Watching anime &amp; Star Wars</strong> — whether it’s the latest Shonen series or a rewatch of <span style='color:#FF6347; font-weight:bold;'>The Mandalorian</span>.
+    - <strong>🎬 Watching anime &amp; Star Wars</strong> — Whether it’s the latest Shonen series or a rewatch of <span style='color:#FF6347; font-weight:bold;'>The Mandalorian</span>.
     <br>
-    - <strong>👟 Collecting sneakers</strong> — because a fresh pair of kicks is always a good idea.
+    - <strong>👟 Collecting sneakers</strong> — Because a fresh pair of kicks is always a good idea.
     <br>
     - <strong>🎵 Listening to music (rap &amp; hip-hop)</strong> — <span style='color:#FF6347; font-weight:bold;'>Kanye, Kendrick</span> and classic 2000s beats keep me inspired.
     <br><br>
@@ -97,7 +97,7 @@ def show_about():
         image_placeholder.image(images[0], caption="Photo 1", width=600)
 
         # Place the slider inside the center column too.
-        selected_index = col_center.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
+        selected_index = col_center.slider("Select a photo", 0, len(images), 0, key="photo_slider")
 
         # Update the image according to the slider selection.
         image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=600)
