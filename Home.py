@@ -117,15 +117,13 @@ st.markdown("""
 
 # --- PERSONAL INFORMATION (Header Section) ---
 name = "Avinash Pandey"
-description1 = ("""I have a strong curiosity for leveraging AI, Machine Learning, and Data Engineering to develop scalable data pipelines, optimize AI-driven workflows, and extract meaningful insights from unstructured data.
+description1 = ("""\
+Hi there! I am a <span style="color:#1E90FF; font-weight:bold;">Data & Machine Learning Engineer</span> with a <span style="color:#1E90FF; font-weight:bold;">B.S. in Computer Science</span> and a minor in Mathematics from <span style="color:#1E90FF; font-weight:bold;">Purdue University (Dec 2024)</span>, specializing in <span style="color:#FF6347; font-weight:bold;">AI-driven data pipelines, ETL automation, and scalable ML solutions</span>.
 
-Most recently, as a Machine Learning Engineering Intern at Aider Ventures (Nienna Lab), I developed an automated ETL pipeline that processed 10,000+ research papers, leveraging FAISS embeddings, ChromaDB, and LangChain to improve retrieval accuracy and metadata extraction by 20%. I also built interactive data visualization frameworks to analyze trends in AI research, providing structured insights for non-technical stakeholders.
+At <span style="color:#1E90FF; font-weight:bold;">Aider Ventures</span>, I developed an automated ETL pipeline processing <span style="color:#FF6347; font-weight:bold;">10,000+ research papers</span>, integrating <span style="color:#FF6347; font-weight:bold;">FAISS embeddings, ChromaDB, and LangChain</span> to enhance retrieval accuracy and metadata extraction. Previously, at <span style="color:#1E90FF; font-weight:bold;">Legislative Services Agency</span>, I designed SQL-based ETL workflows and Power BI dashboards, achieving <span style="color:#FF6347; font-weight:bold;">98% data accuracy</span> in legislative data processing.
 
-Previously, at Legislative Services Agency, I designed SQL-based ETL workflows to validate Indiana General Assembly datasets, achieving 98% data accuracy. I collaborated with business analysts to develop Tableau and Power BI dashboards, enhancing legislative data accessibility and decision-making.
-
-In my AI & Data Science projects, I have developed predictive analytics models, including an AI-driven diabetes prediction pipeline that achieved 97% recall and 95% ROC AUC, optimizing feature engineering with SMOTE and deep learning architectures. Additionally, I built an NLP-powered mutual learning framework for news classification, integrating Multinomial Naïve Bayes, SVMs, and neural networks, achieving 98% accuracy.
-
-My expertise encompasses building AI-driven data solutions, developing scalable ETL workflows, and applying advanced analytics to real-world challenges. I excel at bridging business and data science, transforming data-driven questions into production-ready AI applications, and delivering insights that drive strategic decision-making.""")
+My expertise includes <span style="color:#FF6347; font-weight:bold;">Python, SQL, Cloud Computing (AWS, Docker, Kubernetes)</span> and <span style="color:#FF6347; font-weight:bold;">Machine Learning (Scikit-learn, PyTorch, TensorFlow)</span>. I thrive at bridging AI, data engineering, and business intelligence to drive actionable insights and scalable AI solutions.
+""")
 social_media = {
     "Email": {
          "link": "mailto:aopandey24@gmail.com",
