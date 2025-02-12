@@ -19,6 +19,9 @@ def show_about():
     Capturing moments with my camera and sharing experiences helps me find balance and fuels my creativity.
     """)
 
+
+    st.markdown("<br><br><br>", unsafe_allow_html=True)
+
     # Photo Slider Section
     st.header("Personal/Interests Photos")
 
