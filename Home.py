@@ -15,10 +15,14 @@ spec.loader.exec_module(projects)
 # --- PAGE CONFIGURATION (Use wide layout so the header can span full width) ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 
+
 # Hide the default sidebar (Option 1: hide entire sidebar)
 st.markdown(
     """
     <style>
+    [data-testid="stSidebarNav"] {
+        display: none;
+    }
     [data-testid="collapsedControl"] {
         display: none !important;
     }
