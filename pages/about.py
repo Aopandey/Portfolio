@@ -58,46 +58,46 @@ def show_about():
 
     st.markdown("<br><br><br>", unsafe_allow_html=True)
 
-    # Photo Slider Section
-    # st.header("Personal/Interests Photos")
-    # st.markdown("<br>", unsafe_allow_html=True)
-
-    # List of image file paths (ensure these files exist in the specified location)
-    image_paths = [
-        "images/hobby1.JPG",
-        "images/hobby2.JPG",
-        "images/hobby3.JPG",
-        "images/hobby4.jpg",
-        "images/hobby5.JPG",
-        "images/hobby6.JPG",
-        "images/hobby7.jpg"
-
-    ]
-
-    landscape_exceptions = ["images/hobby3.JPG", "images/hobby7.jpg"]
-    # Load images using PIL and force portrait orientation:
-    images = []
-    for path in image_paths:
-        img = Image.open(path)
-        # Apply exif_transpose to fix orientation if needed
-        img = ImageOps.exif_transpose(img)
-        # If image is landscape, rotate it to portrait
-        if path not in landscape_exceptions and img.width > img.height:
-            img = img.rotate(90, expand=True)
-        images.append(img)
-
-    # Create a container that centers the image and slider together
-    with st.container():
-        # Use columns to limit the slider width.
-        # Here, we create three columns with ratios that force the slider to be in a narrow central column.
-        col_left, col_center, col_right = st.columns([1, 1, 2])
-
-        # Display the image in the center column.
-        image_placeholder = col_center.empty()
-        image_placeholder.image(images[0], caption="Photo 1", width=600)
-
-        # Place the slider inside the center column too.
-        selected_index = col_center.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
-
-        # Update the image according to the slider selection.
-        image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=600)
+    # # Photo Slider Section
+    # # st.header("Personal/Interests Photos")
+    # # st.markdown("<br>", unsafe_allow_html=True)
+    #
+    # # List of image file paths (ensure these files exist in the specified location)
+    # image_paths = [
+    #     "images/hobby1.JPG",
+    #     "images/hobby2.JPG",
+    #     "images/hobby3.JPG",
+    #     "images/hobby4.jpg",
+    #     "images/hobby5.JPG",
+    #     "images/hobby6.JPG",
+    #     "images/hobby7.jpg"
+    #
+    # ]
+    #
+    # landscape_exceptions = ["images/hobby3.JPG", "images/hobby7.jpg"]
+    # # Load images using PIL and force portrait orientation:
+    # images = []
+    # for path in image_paths:
+    #     img = Image.open(path)
+    #     # Apply exif_transpose to fix orientation if needed
+    #     img = ImageOps.exif_transpose(img)
+    #     # If image is landscape, rotate it to portrait
+    #     if path not in landscape_exceptions and img.width > img.height:
+    #         img = img.rotate(90, expand=True)
+    #     images.append(img)
+    #
+    # # Create a container that centers the image and slider together
+    # with st.container():
+    #     # Use columns to limit the slider width.
+    #     # Here, we create three columns with ratios that force the slider to be in a narrow central column.
+    #     col_left, col_center, col_right = st.columns([1, 1, 2])
+    #
+    #     # Display the image in the center column.
+    #     image_placeholder = col_center.empty()
+    #     image_placeholder.image(images[0], caption="Photo 1", width=600)
+    #
+    #     # Place the slider inside the center column too.
+    #     selected_index = col_center.slider("Select a photo", 0, len(images) - 1, 0, key="photo_slider")
+    #
+    #     # Update the image according to the slider selection.
+    #     image_placeholder.image(images[selected_index], caption=f"Photo {selected_index + 1}", width=600)
