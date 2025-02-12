@@ -64,9 +64,14 @@ def show_about():
 
     # List of image file paths (ensure these files exist in the specified location)
     image_paths = [
-        "images/hobby1.JPG",
-        "images/hobby2.JPG",
-        "images/hobby3.JPG"
+        "images/hobby1.jpg",
+        "images/hobby2.jpg",
+        "images/hobby3.jpg",
+        "images/hobby4.jpg",
+        "images/hobby5.JPG",
+        "images/hobby6.JPG",
+        "images/hobby7.jpg"
+
     ]
 
     # Load images using PIL and force portrait orientation:
