@@ -74,6 +74,7 @@ def show_about():
 
     ]
 
+
     # Load images using PIL and force portrait orientation:
     images = []
     for path in image_paths:
