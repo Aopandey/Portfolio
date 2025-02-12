@@ -118,7 +118,7 @@ st.markdown("""
 # --- PERSONAL INFORMATION (Header Section) ---
 name = "Avinash Pandey"
 description1 = ("""\
-<span style="font-size:1.2em;">
+<span style="font-size:1.8em;">
 Hi there! I am a <span style="color:#1E90FF; font-weight:bold;">Data & Machine Learning Engineer</span> with a <span style="color:#1E90FF; font-weight:bold;">B.S. in Computer Science</span> and a minor in Mathematics from <span style="color:#1E90FF; font-weight:bold;">Purdue University (Dec 2024)</span>, specializing in <span style="color:#FF6347; font-weight:bold;">AI-driven data pipelines, ETL automation, and scalable ML solutions</span>.
 
 At <span style="color:#1E90FF; font-weight:bold;">Aider Ventures</span>, I developed an automated ETL pipeline processing <span style="color:#FF6347; font-weight:bold;">10,000+ research papers</span>, integrating <span style="color:#FF6347; font-weight:bold;">FAISS embeddings, ChromaDB, and LangChain</span> to enhance retrieval accuracy and metadata extraction. Previously, at <span style="color:#1E90FF; font-weight:bold;">Legislative Services Agency</span>, I designed SQL-based ETL workflows and Power BI dashboards, achieving <span style="color:#FF6347; font-weight:bold;">98% data accuracy</span> in legislative data processing.
