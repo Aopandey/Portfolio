@@ -255,7 +255,7 @@ with content_col:
     - Implemented metadata filtering algorithms in **<span style='color:#FF6347; font-weight:bold;'>LangChain</span>**, refining data enrichment processes and enhancing the precision of extracted insights by **<span style='color:#FF6347; font-weight:bold;'>20%</span>** to improve downstream AI applications.
     - Built an interactive data visualization framework to analyze AI research trends, presenting insights on top universities, research areas, and general topic distributions to help non-technical stakeholders identify startup and collaboration opportunities.
     - Integrated AI-powered retrieval techniques to streamline query-based document access, reducing information retrieval time for users in business and research settings.
-    - Optimized data processing pipelines using containerization (**<span style='color:#FF6347; font-weight:bold;'>Docker, Kubernetes</span> ensuring scalability and efficient deployment of AI-driven solutions**).
+    - Optimized data processing pipelines using containerization (**<span style='color:#FF6347; font-weight:bold;'>Docker, Kubernetes</span>) ensuring scalability and efficient deployment of AI-driven solutions**.
 
     <br><br>
 
