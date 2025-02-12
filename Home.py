@@ -213,7 +213,7 @@ with content_col:
 
     # TECHNICAL SKILLS SECTION
     st.write("---")
-    st.subheader("Technical Skills")
+    st.markdown("<h2 style='color: #1E90FF;'>Technical Skills</h2>", unsafe_allow_html=True)
 
     st.markdown("""
     <span style='color:#1E90FF; font-size:1.3em; font-weight:bold;'>Programming Languages & Development</span>  
