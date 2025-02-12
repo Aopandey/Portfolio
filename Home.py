@@ -250,7 +250,7 @@ with content_col:
     st.subheader("Professional Experience")
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
-    <span style="font-size:1em;">
+    <span style="font-size:1.1em;">
 
     <strong>
       <span style="color:#1E90FF; font-weight:bold;">Aider Ventures</span> | 
