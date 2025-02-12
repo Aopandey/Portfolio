@@ -77,6 +77,7 @@ def show_about():
         "images/hobby7.jpg"
     ]
 
+
     # Specify which images should remain in their original (landscape) orientation.
     # Adjust the file names in this list to match those that are naturally landscape.
     landscape_exceptions = ["images/hobby2.JPG", "images/hobby5.JPG"]
