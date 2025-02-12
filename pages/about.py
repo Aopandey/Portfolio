@@ -74,7 +74,7 @@ def show_about():
 
     ]
 
-
+    landscape_exceptions = ["images/hobby2.JPG", "images/hobby5.JPG"]
     # Load images using PIL and force portrait orientation:
     images = []
     for path in image_paths:
@@ -82,7 +82,7 @@ def show_about():
         # Apply exif_transpose to fix orientation if needed
         img = ImageOps.exif_transpose(img)
         # If image is landscape, rotate it to portrait
-        if img.width > img.height:
+        if path not in landscape_exceptions and img.width > img.height:
             img = img.rotate(90, expand=True)
         images.append(img)
 
