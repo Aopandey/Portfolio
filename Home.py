@@ -6,6 +6,11 @@
 
 import streamlit as st
 from PIL import Image
+import importlib.util
+
+spec = importlib.util.spec_from_file_location("projects")
+projects = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(projects)
 
 # --- PAGE CONFIGURATION (Use wide layout so the header can span full width) ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
@@ -13,7 +18,7 @@ st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 home_tab, projects_tab, about_tab = st.tabs(["Home", "Projects", "About Me"])
 
 with projects_tab:
-    st.write("Here are my Projects:")
+    projects.show_projects()
 
 # --- LOAD GLOBAL CSS (Your Provided Styles) ---
 with open("styles/main.css") as f:
