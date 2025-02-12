@@ -148,10 +148,10 @@ profile_pic = Image.open("images/photo.jpg")
 # Right column: Description (aligned at the top)
 col_left, col_right = st.columns([1, 2])
 with col_left:
-    st.title(name)
+    st.markdown("<h1 style='text-align: center;'>"+name+"</h1>", unsafe_allow_html=True)
     st.image(profile_pic, width=400)
 with col_right:
-    st.write(description1)
+    st.markdown("<div style='margin-top: 50px;'>"+description1+"</div>", unsafe_allow_html=True)
 
 # --- NARROW CONTENT AREA (Using Columns) ---
 # Create three columns: left spacer, center content, and right spacer.
