@@ -136,7 +136,6 @@ col1, col2 = st.columns([3, 1], gap="small")
 with col1:
     st.title(name)
     st.write(description1)
-    st.write(description2)
     st.download_button(
         label="📁 Download Resume",
         data=PDFbyte,
