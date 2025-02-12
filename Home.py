@@ -1,7 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
-import importlib.util
+import projects
+import about
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
@@ -10,16 +11,6 @@ st.set_page_config(page_title="Portfolio | Avinash Pandey", layout="wide")
 with open("styles/main.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# --- HIDE SIDEBAR COMPLETELY ---
-# st.markdown(
-#     """
-#     <style>
-#     [data-testid="stSidebar"] {display: none !important;}
-#     [data-testid="collapsedControl"] {display: none !important;}
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
 # --- ADDITIONAL CUSTOM CSS ---
 st.markdown(
     """
@@ -40,24 +31,18 @@ selected = option_menu(
     icons=["house", "code", "person"],
     menu_icon="cast", default_index=0, orientation="horizontal",
     styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "#1E90FF", "font-size": "20px"},
-        "nav-link": {"font-size": "18px", "text-align": "center", "margin":"0px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "#1E90FF", "color": "white"},
+        "container": {"padding": "0!important", "background-color": "#0074D9"},
+        "icon": {"color": "white", "font-size": "20px"},
+        "nav-link": {"font-size": "18px", "text-align": "center", "margin":"0px", "--hover-color": "#d33682"},
+        "nav-link-selected": {"background-color": "#d33682", "color": "white"},
     }
 )
 
 # --- DYNAMIC PAGE LOADING ---
 if selected == "Projects":
-    spec = importlib.util.spec_from_file_location("projects", "pages/projects.py")
-    projects = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(projects)
     projects.show_projects()
 
 elif selected == "About Me":
-    spec = importlib.util.spec_from_file_location("about", "pages/about.py")
-    about = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(about)
     about.show_about()
 
 else:
@@ -100,17 +85,34 @@ else:
     profile_pic = Image.open("images/photo.jpg")
 
     # --- HEADER SECTION (FULL WIDTH) ---
-    col_left, col_right = st.columns([1, 2])
-    with col_left:
-        st.markdown("<div style='margin-left: 350px;'><h1 style='text-align: center;'>{}</h1></div>".format(name),
-                    unsafe_allow_html=True)
-        spacer, image_col = st.columns([2, 2])
-        with image_col:
-            st.image(profile_pic, width=500)
-    with col_right:
-        st.markdown(
-            "<div style='margin-left: 200px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1),
-            unsafe_allow_html=True)
+    # col_left, col_right = st.columns([1, 2])
+    # with col_left:
+    #     st.markdown("<div style='margin-left: 350px;'><h1 style='text-align: center;'>{}</h1></div>".format(name),
+    #                 unsafe_allow_html=True)
+    #     spacer, image_col = st.columns([2, 2])
+    #     with image_col:
+    #         st.image(profile_pic, width=500)
+    # with col_right:
+    #     st.markdown(
+    #         "<div style='margin-left: 200px; margin-right: 400px; margin-top: 80px;'>{}</div>".format(description1),
+    #         unsafe_allow_html=True)
+    content_container = st.container()
+    with content_container:
+        left_space, content_col, right_space = st.columns([1, 3, 1])  # Matching width for alignment
+
+        with content_col:
+            inner_col1, inner_col2 = st.columns([1, 2])  # Photo on left, description on right
+
+            with content_col:
+                st.markdown(f"<h1 style='text-align: left; margin-bottom: 20px;'>{name}</h1>", unsafe_allow_html=True)
+                inner_col1, inner_col2 = st.columns([1, 2])  # Photo on left, description on right
+
+                with inner_col1:
+                    st.markdown("<br><br>", unsafe_allow_html=True)  # Push image down
+                    st.image(profile_pic, width=450)  # Adjusted width to fit properly
+
+                with inner_col2:
+                    st.markdown(description1, unsafe_allow_html=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
 
