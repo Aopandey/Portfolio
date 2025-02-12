@@ -69,7 +69,7 @@ profile_pic = Image.open("images/photo.jpg")
 # Right column: Description (aligned at the top)
 col_left, col_right = st.columns([1, 2])
 with col_left:
-    st.markdown("<div style='margin-left: 400px;'><h1 style='text-align: center;'>{}</h1></div>".format(name),
+    st.markdown("<div style='margin-left: 350px;'><h1 style='text-align: center;'>{}</h1></div>".format(name),
                 unsafe_allow_html=True)
     spacer, image_col = st.columns([1, 1])
     with image_col:
