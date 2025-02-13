@@ -98,6 +98,7 @@ def show_projects():
         }
     ]
 
+
     # --- DISPLAY PROJECTS ---
     for project in projects:
         content_container = st.container()
